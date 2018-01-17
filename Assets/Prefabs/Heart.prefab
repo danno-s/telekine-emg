@@ -50,7 +50,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2081e3b280c54f04d962411f44c6b9f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f614440a99be2e44ca85127d06486001, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3451,7 +3451,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a7f769de3d8d5a40baace40c8ea7546, type: 2}
+  - {fileID: 2100000, guid: e10beb3295bad9944a13b95b09a5c5fe, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

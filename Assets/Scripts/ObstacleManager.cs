@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -24,7 +25,7 @@ public class ObstacleManager : NetworkBehaviour {
 	void Update () {
     // Spawn new obstacles
     if(distance > 10) {
-      SpawnObstacle(Utils.GetRandomFromList(Utils.GetRandomFromList(obstacles)));
+      SpawnObstacle(GetRandomObstacle());
     }
 
     distance += speed * Time.deltaTime;
@@ -37,6 +38,19 @@ public class ObstacleManager : NetworkBehaviour {
     }
 	}
 
+  private GameObject GetRandomObstacle() {
+    List<GameObject> obstacleType;
+    float r = UnityEngine.Random.value;
+    if(r < .5) {
+      obstacleType = switches;
+    } else if(r < .9) {
+      obstacleType = gaps;
+    } else {
+      obstacleType = pipes;
+    }
+    return Utils.GetRandomFromList(obstacleType);
+  }
+
   void OnDrawGizmosSelected() {
     Gizmos.DrawLine(transform.position + Vector3.up * height, transform.position - Vector3.up * height);
   }
@@ -45,6 +59,7 @@ public class ObstacleManager : NetworkBehaviour {
     GameObject obj = Instantiate(obstacle, transform);
     NetworkServer.Spawn(obj);
     distance = 0;
+    IncreaseSpeed();
   }
 
   void IncreaseSpeed() {

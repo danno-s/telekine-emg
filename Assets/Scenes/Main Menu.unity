@@ -420,7 +420,7 @@ MonoBehaviour:
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
-  m_LogLevel: 1
+  m_LogLevel: 2
   m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_OnlineScene: Birds
   m_SpawnPrefabs:
   - {fileID: 1770328814035062, guid: 054d589af5387734fbd7ce28e4297eaf, type: 2}
-  - {fileID: 1770328814035062, guid: 5b807cdd6f8c92944b5cc42e0258cb1d, type: 2}
+  - {fileID: 1156327378452110, guid: a0073957c7f327946ae95cf2938ab59d, type: 2}
   - {fileID: 1508976246638930, guid: 6a527574eb8a3e941a78947f5c429557, type: 2}
   - {fileID: 1508976246638930, guid: 8365d9281f0c54244a2f28564cb85458, type: 2}
   - {fileID: 1508976246638930, guid: d8ba80f08dd70cd4eaae2215f6f0caa4, type: 2}
@@ -496,7 +496,7 @@ MonoBehaviour:
   debug: {fileID: 439017679}
   playerPrefabs:
   - {fileID: 1770328814035062, guid: 054d589af5387734fbd7ce28e4297eaf, type: 2}
-  - {fileID: 1770328814035062, guid: 5b807cdd6f8c92944b5cc42e0258cb1d, type: 2}
+  - {fileID: 1156327378452110, guid: a0073957c7f327946ae95cf2938ab59d, type: 2}
 --- !u!4 &531085603
 Transform:
   m_ObjectHideFlags: 0
@@ -917,7 +917,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -821650313
+  randomSeed: 720696287
   InitialModule:
     serializedVersion: 3
     enabled: 1
