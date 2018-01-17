@@ -1,0 +1,785 @@
+fileFormatVersion: 2
+guid: f29ba6706cfd3b847b851e39413b6681
+timeCreated: 1515597971
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: LevelObjectTiles_0
+    21300002: LevelObjectTiles_1
+    21300004: LevelObjectTiles_2
+    21300006: LevelObjectTiles_3
+    21300008: LevelObjectTiles_4
+    21300010: LevelObjectTiles_5
+    21300012: LevelObjectTiles_6
+    21300014: LevelObjectTiles_7
+    21300016: LevelObjectTiles_8
+    21300018: LevelObjectTiles_9
+    21300020: LevelObjectTiles_10
+    21300022: LevelObjectTiles_11
+    21300024: LevelObjectTiles_12
+    21300026: LevelObjectTiles_13
+    21300028: LevelObjectTiles_14
+    21300030: LevelObjectTiles_15
+    21300032: LevelObjectTiles_16
+    21300034: LevelObjectTiles_17
+    21300036: LevelObjectTiles_18
+    21300038: LevelObjectTiles_19
+    21300040: LevelObjectTiles_20
+    21300042: LevelObjectTiles_21
+    21300044: LevelObjectTiles_22
+    21300046: LevelObjectTiles_23
+    21300048: LevelObjectTiles_24
+    21300050: LevelObjectTiles_25
+    21300052: LevelObjectTiles_26
+    21300054: LevelObjectTiles_27
+    21300056: LevelObjectTiles_28
+    21300058: LevelObjectTiles_29
+    21300060: LevelObjectTiles_30
+    21300062: LevelObjectTiles_31
+    21300064: LevelObjectTiles_32
+    21300066: LevelObjectTiles_33
+    21300068: LevelObjectTiles_34
+    21300070: LevelObjectTiles_35
+    21300072: LevelObjectTiles_36
+    21300074: LevelObjectTiles_37
+    21300076: LevelObjectTiles_38
+    21300078: LevelObjectTiles_39
+    21300080: LevelObjectTiles_40
+    21300082: LevelObjectTiles_41
+    21300084: LevelObjectTiles_42
+    21300086: LevelObjectTiles_43
+    21300088: LevelObjectTiles_44
+    21300090: LevelObjectTiles_45
+    21300092: LevelObjectTiles_46
+    21300094: LevelObjectTiles_47
+    21300096: LevelObjectTiles_48
+    21300098: LevelObjectTiles_49
+    21300100: LevelObjectTiles_50
+    21300102: LevelObjectTiles_51
+    21300104: LevelObjectTiles_52
+    21300106: LevelObjectTiles_53
+    21300108: LevelObjectTiles_54
+    21300110: LevelObjectTiles_55
+    21300112: LevelObjectTiles_56
+    21300114: LevelObjectTiles_57
+    21300116: LevelObjectTiles_58
+    21300118: LevelObjectTiles_59
+    21300120: LevelObjectTiles_60
+    21300122: LevelObjectTiles_61
+    21300124: LevelObjectTiles_62
+    21300126: LevelObjectTiles_63
+    21300128: LevelObjectTiles_64
+    21300130: LevelObjectTiles_65
+    21300132: LevelObjectTiles_66
+    21300134: LevelObjectTiles_67
+    21300136: LevelObjectTiles_68
+    21300138: LevelObjectTiles_69
+    21300140: LevelObjectTiles_70
+    21300142: LevelObjectTiles_71
+    21300144: LevelObjectTiles_72
+    21300146: LevelObjectTiles_73
+    21300148: LevelObjectTiles_74
+    21300150: LevelObjectTiles_75
+    21300152: LevelObjectTiles_76
+    21300154: LevelObjectTiles_77
+    21300156: LevelObjectTiles_78
+    21300158: LevelObjectTiles_79
+    21300160: LevelObjectTiles_80
+    21300162: LevelObjectTiles_81
+    21300164: LevelObjectTiles_82
+    21300166: LevelObjectTiles_83
+    21300168: LevelObjectTiles_84
+    21300170: LevelObjectTiles_85
+    21300172: LevelObjectTiles_86
+    21300174: LevelObjectTiles_87
+    21300176: LevelObjectTiles_88
+    21300178: LevelObjectTiles_89
+    21300180: LevelObjectTiles_90
+    21300182: LevelObjectTiles_91
+    21300184: LevelObjectTiles_92
+    21300186: LevelObjectTiles_93
+    21300188: LevelObjectTiles_94
+    21300190: LevelObjectTiles_95
+    21300192: LevelObjectTiles_96
+    21300194: LevelObjectTiles_97
+    21300196: LevelObjectTiles_98
+    21300198: LevelObjectTiles_99
+    21300200: LevelObjectTiles_100
+    21300202: LevelObjectTiles_101
+    21300204: LevelObjectTiles_102
+    21300206: LevelObjectTiles_103
+    21300208: LevelObjectTiles_104
+    21300210: LevelObjectTiles_105
+    21300212: LevelObjectTiles_106
+    21300214: LevelObjectTiles_107
+    21300216: LevelObjectTiles_108
+    21300218: LevelObjectTiles_109
+    21300220: LevelObjectTiles_110
+    21300222: LevelObjectTiles_111
+    21300224: LevelObjectTiles_112
+    21300226: LevelObjectTiles_113
+    21300228: LevelObjectTiles_114
+    21300230: LevelObjectTiles_115
+    21300232: LevelObjectTiles_116
+    21300234: LevelObjectTiles_117
+    21300236: LevelObjectTiles_118
+    21300238: LevelObjectTiles_119
+    21300240: LevelObjectTiles_120
+    21300242: LevelObjectTiles_121
+    21300244: LevelObjectTiles_122
+    21300246: LevelObjectTiles_123
+    21300248: LevelObjectTiles_124
+    21300250: LevelObjectTiles_125
+    21300252: LevelObjectTiles_126
+    21300254: LevelObjectTiles_127
+    21300256: LevelObjectTiles_128
+    21300258: LevelObjectTiles_129
+    21300260: LevelObjectTiles_130
+    21300262: LevelObjectTiles_131
+    21300264: LevelObjectTiles_132
+    21300266: LevelObjectTiles_133
+    21300268: LevelObjectTiles_134
+    21300270: LevelObjectTiles_135
+    21300272: LevelObjectTiles_136
+    21300274: LevelObjectTiles_137
+    21300276: LevelObjectTiles_138
+    21300278: LevelObjectTiles_139
+    21300280: LevelObjectTiles_140
+    21300282: LevelObjectTiles_141
+    21300284: LevelObjectTiles_142
+    21300286: LevelObjectTiles_143
+    21300288: LevelObjectTiles_144
+    21300290: LevelObjectTiles_145
+    21300292: LevelObjectTiles_146
+    21300294: LevelObjectTiles_147
+    21300296: LevelObjectTiles_148
+    21300298: LevelObjectTiles_149
+    21300300: LevelObjectTiles_150
+    21300302: LevelObjectTiles_151
+    21300304: LevelObjectTiles_152
+    21300306: LevelObjectTiles_153
+    21300308: LevelObjectTiles_154
+    21300310: LevelObjectTiles_155
+    21300312: LevelObjectTiles_156
+    21300314: LevelObjectTiles_157
+    21300316: LevelObjectTiles_158
+    21300318: LevelObjectTiles_159
+    21300320: LevelObjectTiles_160
+    21300322: LevelObjectTiles_161
+    21300324: LevelObjectTiles_162
+    21300326: LevelObjectTiles_163
+    21300328: LevelObjectTiles_164
+    21300330: LevelObjectTiles_165
+    21300332: LevelObjectTiles_166
+    21300334: LevelObjectTiles_167
+    21300336: LevelObjectTiles_168
+    21300338: LevelObjectTiles_169
+    21300340: LevelObjectTiles_170
+    21300342: LevelObjectTiles_171
+    21300344: LevelObjectTiles_172
+    21300346: LevelObjectTiles_173
+    21300348: LevelObjectTiles_174
+    21300350: LevelObjectTiles_175
+    21300352: LevelObjectTiles_176
+    21300354: LevelObjectTiles_177
+    21300356: LevelObjectTiles_178
+    21300358: LevelObjectTiles_179
+    21300360: LevelObjectTiles_180
+    21300362: LevelObjectTiles_181
+    21300364: LevelObjectTiles_182
+    21300366: LevelObjectTiles_183
+    21300368: LevelObjectTiles_184
+    21300370: LevelObjectTiles_185
+    21300372: LevelObjectTiles_186
+    21300374: LevelObjectTiles_187
+    21300376: LevelObjectTiles_188
+    21300378: LevelObjectTiles_189
+    21300380: LevelObjectTiles_190
+    21300382: LevelObjectTiles_191
+    21300384: LevelObjectTiles_192
+    21300386: LevelObjectTiles_193
+    21300388: LevelObjectTiles_194
+    21300390: LevelObjectTiles_195
+    21300392: LevelObjectTiles_196
+    21300394: LevelObjectTiles_197
+    21300396: LevelObjectTiles_198
+    21300398: LevelObjectTiles_199
+    21300400: LevelObjectTiles_200
+    21300402: LevelObjectTiles_201
+    21300404: LevelObjectTiles_202
+    21300406: LevelObjectTiles_203
+    21300408: LevelObjectTiles_204
+    21300410: LevelObjectTiles_205
+    21300412: LevelObjectTiles_206
+    21300414: LevelObjectTiles_207
+    21300416: LevelObjectTiles_208
+    21300418: LevelObjectTiles_209
+    21300420: LevelObjectTiles_210
+    21300422: LevelObjectTiles_211
+    21300424: LevelObjectTiles_212
+    21300426: LevelObjectTiles_213
+    21300428: LevelObjectTiles_214
+    21300430: LevelObjectTiles_215
+    21300432: LevelObjectTiles_216
+    21300434: LevelObjectTiles_217
+    21300436: LevelObjectTiles_218
+    21300438: LevelObjectTiles_219
+    21300440: LevelObjectTiles_220
+    21300442: LevelObjectTiles_221
+    21300444: LevelObjectTiles_222
+    21300446: LevelObjectTiles_223
+    21300448: LevelObjectTiles_224
+    21300450: LevelObjectTiles_225
+    21300452: LevelObjectTiles_226
+    21300454: LevelObjectTiles_227
+    21300456: LevelObjectTiles_228
+    21300458: LevelObjectTiles_229
+    21300460: LevelObjectTiles_230
+    21300462: LevelObjectTiles_231
+    21300464: LevelObjectTiles_232
+    21300466: LevelObjectTiles_233
+    21300468: LevelObjectTiles_234
+    21300470: LevelObjectTiles_235
+    21300472: LevelObjectTiles_236
+    21300474: LevelObjectTiles_237
+    21300476: LevelObjectTiles_238
+    21300478: LevelObjectTiles_239
+    21300480: LevelObjectTiles_240
+    21300482: LevelObjectTiles_241
+    21300484: LevelObjectTiles_242
+    21300486: LevelObjectTiles_243
+    21300488: LevelObjectTiles_244
+    21300490: LevelObjectTiles_245
+    21300492: LevelObjectTiles_246
+    21300494: LevelObjectTiles_247
+    21300496: LevelObjectTiles_248
+    21300498: LevelObjectTiles_249
+    21300500: LevelObjectTiles_250
+    21300502: LevelObjectTiles_251
+    21300504: LevelObjectTiles_252
+    21300506: LevelObjectTiles_253
+    21300508: LevelObjectTiles_254
+    21300510: LevelObjectTiles_255
+    21300512: LevelObjectTiles_256
+    21300514: LevelObjectTiles_257
+    21300516: LevelObjectTiles_258
+    21300518: LevelObjectTiles_259
+    21300520: LevelObjectTiles_260
+    21300522: LevelObjectTiles_261
+    21300524: LevelObjectTiles_262
+    21300526: LevelObjectTiles_263
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LevelObjectTiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LevelObjectTiles_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -192, y: 352}
+      - {x: -192, y: -352}
+      - {x: 192, y: -352}
+      - {x: 192, y: 352}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

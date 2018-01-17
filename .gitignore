@@ -4,6 +4,7 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+/flpbrd_Data/
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -30,5 +31,6 @@ ExportedObj/
 sysinfo.txt
 
 # Builds
+*exe
 *.apk
 *.unitypackage
