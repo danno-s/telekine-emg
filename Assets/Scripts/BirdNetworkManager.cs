@@ -6,30 +6,27 @@ using UnityEngine.Networking;
 using UnityEngine.Networking.NetworkSystem;
 
 public class BirdNetworkManager : NetworkManager {
-  
-  public NetworkDiscovery networkDiscovery;
+  public EmgNetworkDiscovery networkDiscovery;
   public Text debug;
   public List<GameObject> playerPrefabs;
-  bool searching;
   float time;
 
   private void Start() {
-    if(!networkDiscovery.Initialize())
-      Log("Port busy.");
+    networkDiscovery.Initialize();
+  }
+
+  public override void OnStartHost() {
+    if(!networkDiscovery.StartAsServer())
+      Log("Couldn't start broadcasting.");
   }
 
   private void Update() {
-    if(searching)
+    if(networkDiscovery.running && networkDiscovery.isClient)
       time += Time.deltaTime;
 
-    if(time > 10.0) {
-      searching = false;
+    if(time > 5.0 && !networkDiscovery.connected) {
       time = 0f;
       networkDiscovery.StopBroadcast();
-      if(!networkDiscovery.StartAsServer()) {
-        Log("Couldn't start broadcasting.");
-        return;
-      }
       StartHost();
       Log("Couldn't find active matches.\nStarting server...");
     }
@@ -40,15 +37,11 @@ public class BirdNetworkManager : NetworkManager {
   }
 
   public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId) {
-    Debug.Log("Trying to spawn player. Player list status:");
-    foreach(var players in playerPrefabs) {
-      Debug.Log(players.name);
-    }
     var player = Instantiate(Utils.PopRandomFromList<GameObject>(playerPrefabs));
     NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
   }
+
   public void FindMatch() {
-    searching = true;
     time = 0;
     Log("Searching for matches...");
     if(!networkDiscovery.StartAsClient())
