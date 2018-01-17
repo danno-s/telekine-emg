@@ -1,20 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.Networking.NetworkSystem;
 
 public class BirdNetworkManager : NetworkManager {
   
+  public NetworkDiscovery networkDiscovery;
+  public Text debug;
   public List<GameObject> playerPrefabs;
+  bool searching;
+  float time;
 
-  public void JoinServer(string ip) {
-    StartClient();
-    Network.Connect(ip, networkPort);
+  private void Start() {
+    if(!networkDiscovery.Initialize())
+      Log("Port busy.");
   }
 
-  public void StartLANServer() {
-    StartHost();
+  private void Update() {
+    if(searching)
+      time += Time.deltaTime;
+
+    if(time > 10.0) {
+      searching = false;
+      time = 0f;
+      networkDiscovery.StopBroadcast();
+      if(!networkDiscovery.StartAsServer()) {
+        Log("Couldn't start broadcasting.");
+        return;
+      }
+      StartHost();
+      Log("Couldn't find active matches.\nStarting server...");
+    }
+  }
+
+  public void Log(string message) {
+    debug.text = message;
   }
 
   public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId) {
@@ -25,12 +47,11 @@ public class BirdNetworkManager : NetworkManager {
     var player = Instantiate(Utils.PopRandomFromList<GameObject>(playerPrefabs));
     NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
   }
-
-  public void StartPlaying() {
-    GetComponent<LANBroadcastService>().StartSearchBroadCasting(JoinServer, StartLANServer);
-  }
-
-  private void OnApplicationQuit() {
-    GetComponent<LANBroadcastService>().StopBroadCasting();
+  public void FindMatch() {
+    searching = true;
+    time = 0;
+    Log("Searching for matches...");
+    if(!networkDiscovery.StartAsClient())
+      Log("Couldn't start listening.");
   }
 }

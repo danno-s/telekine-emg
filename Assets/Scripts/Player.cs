@@ -58,7 +58,7 @@ public class Player : NetworkBehaviour {
     var pos = transform.position;
     speed -= gravity * Time.deltaTime;
 
-    if(alive && Input.GetKeyDown(KeyCode.Space)) {
+    if(alive && (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0)) {
       Jump();
     }
 
