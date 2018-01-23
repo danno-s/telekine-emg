@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61891525237565060}
   - component: {fileID: 114781851843888506}
   m_Layer: 0
-  m_Name: Switch Blue
+  m_Name: Switch Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 1
-  m_SendInterval: 0.09090909
+  m_SendInterval: 0.1
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -101,7 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c340d922efad9f44f8d817936020cfbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
+  speed: 0
+  team: 0
   moveSpeed: 5
   pipes:
   - {fileID: 1508976246638930, guid: 6a527574eb8a3e941a78947f5c429557, type: 2}
@@ -122,22 +123,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 148
-    i1: 244
-    i2: 106
-    i3: 245
-    i4: 50
-    i5: 235
-    i6: 31
-    i7: 196
-    i8: 41
-    i9: 21
-    i10: 223
-    i11: 77
-    i12: 250
-    i13: 75
-    i14: 23
-    i15: 136
+    i0: 94
+    i1: 234
+    i2: 42
+    i3: 136
+    i4: 203
+    i5: 250
+    i6: 146
+    i7: 116
+    i8: 154
+    i9: 236
+    i10: 71
+    i11: 228
+    i12: 31
+    i13: 26
+    i14: 8
+    i15: 157
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
 --- !u!212 &212802106289837570
@@ -174,7 +175,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6fccd17acd7390948ab3c727b3634d29, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4531a4f831b1844bbad619d53af152d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

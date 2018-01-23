@@ -9,7 +9,6 @@ public class Player : NetworkBehaviour {
   public float gravity, jumpSpeed;
   public Team team;
   public bool debug;
-  public HPBar hpBar;
   private bool alive;
 
   [SyncVar]
@@ -28,10 +27,7 @@ public class Player : NetworkBehaviour {
 
     animator = GetComponent<Animator>();
     alive = true;
-    var canvas = FindObjectOfType<Canvas>();
 
-    hpBar = Instantiate(hpBar, canvas.transform);
-    hpBar.BindToPlayer(this);
     speed = jumpSpeed;
   }
 
@@ -45,10 +41,9 @@ public class Player : NetworkBehaviour {
   }
 
   internal void Hit() {
+    // TODO: Add animations for dying and respawning.
     animator.ResetTrigger("Recovered");
-    if(hpBar.ReduceHP()) {
-      animator.SetTrigger("Hurt");
-    }
+    animator.SetTrigger("Hurt");
   }
 
   public void Die() {

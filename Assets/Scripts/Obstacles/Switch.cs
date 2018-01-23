@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Switch : NetworkBehaviour, IObstacle {
+public class Switch : AbstractObstacle {
 
   public Team team;
   public float moveSpeed;
@@ -11,13 +11,13 @@ public class Switch : NetworkBehaviour, IObstacle {
   private bool active;
   private Pipe linked;
 
-  public void Execute(Player player) {
+  public override void Execute(Player player) {
     if(isServer && player.team == team) {
       active = true;
     }
   }
 
-  public bool CanBeDestroyed() {
+  public override bool CanBeDestroyed() {
     return (!active && transform.position.x < -10) || (active && linked == null);
   }
 
@@ -40,7 +40,7 @@ public class Switch : NetworkBehaviour, IObstacle {
 	// Update is called once per frame
 	void Update () {
     var myPos = transform.position;
-    myPos.x -= 5 * Time.deltaTime;
+    myPos.x -= speed * Time.deltaTime;
     transform.position = myPos;
 
     if(!active)

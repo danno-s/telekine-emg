@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4884267522548066}
   - component: {fileID: 114594008053053984}
   - component: {fileID: 212942764917975748}
-  - component: {fileID: 114705308811415642}
+  - component: {fileID: 114884446851475456}
   - component: {fileID: 61369035432981396}
   - component: {fileID: 114675536581837992}
   m_Layer: 0
-  m_Name: Pipe Down Pink
+  m_Name: Pipe Up Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,14 +66,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1508976246638930}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4026504329426792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &61369035432981396
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 1
-  m_SendInterval: 0.1
+  m_SendInterval: 0.09090909
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -134,25 +134,25 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 131
-    i1: 101
-    i2: 217
-    i3: 40
-    i4: 31
-    i5: 12
-    i6: 84
-    i7: 36
-    i8: 74
-    i9: 47
-    i10: 40
-    i11: 86
-    i12: 76
-    i13: 184
-    i14: 84
-    i15: 88
+    i0: 106
+    i1: 82
+    i2: 117
+    i3: 116
+    i4: 235
+    i5: 138
+    i6: 62
+    i7: 148
+    i8: 26
+    i9: 120
+    i10: 148
+    i11: 127
+    i12: 92
+    i13: 66
+    i14: 149
+    i15: 87
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
---- !u!114 &114705308811415642
+--- !u!114 &114884446851475456
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -160,9 +160,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1508976246638930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3510dd51415680446a7a8dda296fa637, type: 3}
+  m_Script: {fileID: 11500000, guid: cc82b876f4f0d4c4f9ce4062f5fecd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
   team: 0
 --- !u!212 &212003481347801542
 SpriteRenderer:

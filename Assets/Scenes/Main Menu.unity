@@ -470,7 +470,7 @@ MonoBehaviour:
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
   m_OfflineScene: Main Menu
-  m_OnlineScene: Birds
+  m_OnlineScene: Birds_01
   m_SpawnPrefabs:
   - {fileID: 1770328814035062, guid: 054d589af5387734fbd7ce28e4297eaf, type: 2}
   - {fileID: 1156327378452110, guid: a0073957c7f327946ae95cf2938ab59d, type: 2}

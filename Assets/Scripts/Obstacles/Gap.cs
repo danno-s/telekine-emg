@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Gap : NetworkBehaviour, IObstacle {
+public class Gap : AbstractObstacle {
 
   public Team team;
-
-  public bool CanBeDestroyed() {
-    return transform.position.x < -10;
-  }
 
   public override void OnStartServer() {
     var pos = transform.position;
@@ -19,11 +15,11 @@ public class Gap : NetworkBehaviour, IObstacle {
 
   private void Update() {
     var pos = transform.position;
-    pos.x -= 5 * Time.deltaTime;
+    pos.x -= speed * Time.deltaTime;
     transform.position = pos;
   }
 
-  public void Execute(Player player) {
+  public override void Execute(Player player) {
     if(player.isLocalPlayer && player.team == team) {
       player.Hit();
     }

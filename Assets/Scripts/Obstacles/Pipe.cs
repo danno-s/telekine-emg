@@ -2,10 +2,10 @@
 using UnityEngine.Networking;
 using System.Collections;
 
-public abstract class Pipe : NetworkBehaviour, IObstacle {
+public abstract class Pipe : AbstractObstacle {
   public Team team;
   
-  public void Execute(Player player) {
+  public override void Execute(Player player) {
     if(player.isLocalPlayer && player.team == team) {
       player.Hit();
     }
@@ -13,11 +13,7 @@ public abstract class Pipe : NetworkBehaviour, IObstacle {
 
   public void Update() {
     var pos = transform.position;
-    pos.x -= 5 * Time.deltaTime;
+    pos.x -= speed * Time.deltaTime;
     transform.position = pos;
-  }
-
-  public bool CanBeDestroyed() {
-    return transform.position.x < -10;
   }
 }
