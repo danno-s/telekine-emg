@@ -61,11 +61,11 @@ public class Calibrator : MonoBehaviour {
 
     switch(stage) {
       case 1:
-        rest += EMGInput.GetRawIntensity();
+        rest += EMGInput.GetIntensity();
         restN++;
         break;
       case 3:
-        hold += EMGInput.GetRawIntensity();
+        hold += EMGInput.GetIntensity();
         holdN++;
         break;
     }

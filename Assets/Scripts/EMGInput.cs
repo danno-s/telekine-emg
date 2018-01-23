@@ -44,7 +44,7 @@ public class EMGInput : MonoBehaviour {
     audioClip.clip = Microphone.Start(null, true, 10, max);
     audioClip.loop = true;
     while(Microphone.GetPosition(null) < 0);
-    audioClip.PlayDelayed(0.01f);
+    audioClip.Play();
   }
 
   public static bool IsCalibrated() {
@@ -56,8 +56,8 @@ public class EMGInput : MonoBehaviour {
 
   public static void Calibrate(float rest, float hold) {
     var range = hold - rest;
-    resting = rest + 4 * range / 5;
-    active = hold - 4 * range / 5;
+    resting = rest + 2 * range / 3;
+    active = hold - 2 * range / 3;
     PlayerPrefs.SetFloat("resting", resting);
     PlayerPrefs.SetFloat("active", active);
     PlayerPrefs.Save();
@@ -68,8 +68,7 @@ public class EMGInput : MonoBehaviour {
     audioClip.GetOutputData(f, 0);
     intensity = 0f;
     foreach(var sample in f)
-      intensity += Math.Abs(sample);
-    intensity /= f.Length;
+      intensity = intensity < Math.Abs(sample) ? Math.Abs(sample) : intensity;
 
     lastValues.Add(intensity);
 

@@ -133,4 +133,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownFrames: 10
-  averageLength: 3
+  averageLength: 5
