@@ -13,11 +13,9 @@ public class ObstacleManager : NetworkBehaviour {
   [SyncVar]
   public float speed;
   private float distance;
-  private List<List<GameObject>> obstacles;
 
   // Use this for initialization
   void Start () {
-    obstacles = new List<List<GameObject>>() { pipes, switches, gaps };
     parallax = GameObject.Find("Parallax").GetComponent<Parallax>();
   }
 	
@@ -59,11 +57,10 @@ public class ObstacleManager : NetworkBehaviour {
     GameObject obj = Instantiate(obstacle, transform);
     NetworkServer.Spawn(obj);
     distance = 0;
-    IncreaseSpeed();
   }
 
   void IncreaseSpeed() {
-    speed += 1f / speed;
+    speed += 0.1f / speed;
     parallax.UpdateSpeed(speed);
   }
 }

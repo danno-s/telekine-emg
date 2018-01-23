@@ -24,7 +24,7 @@ public class BirdNetworkManager : NetworkManager {
     if(networkDiscovery.running && networkDiscovery.isClient)
       time += Time.deltaTime;
 
-    if(time > 1.0 && !networkDiscovery.connected) {
+    if(time > 5.0 && !networkDiscovery.connected) {
       time = 0f;
       networkDiscovery.StopBroadcast();
       StartHost();
@@ -45,6 +45,6 @@ public class BirdNetworkManager : NetworkManager {
     time = 0;
     Log("Searching for matches...");
     if(!networkDiscovery.StartAsClient())
-      Log("Couldn't start listening.");
+      Debug.Log("Couldn't start listening.");
   }
 }

@@ -23,6 +23,9 @@ public class Player : NetworkBehaviour {
       return;
     }
 
+    EMGInput.SubscribeToSinglePulse(Jump);
+    EMGInput.SubscribeToContinuousPulse(Glide);
+
     animator = GetComponent<Animator>();
     alive = true;
     var canvas = FindObjectOfType<Canvas>();
@@ -33,7 +36,12 @@ public class Player : NetworkBehaviour {
   }
 
   internal void Jump() {
-    speed = 5;
+    if(isLocalPlayer && (alive || debug))
+      speed = 5;
+  }
+
+  internal void Glide() {
+    speed = speed < -gravity / 8 ? -gravity / 8 : speed;
   }
 
   internal void Hit() {
@@ -50,7 +58,7 @@ public class Player : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-    transform.rotation = Quaternion.AngleAxis(Mathf.Rad2Deg * Mathf.Atan(speed / 3), Vector3.forward);
+    transform.rotation = Quaternion.AngleAxis(Mathf.Rad2Deg * Mathf.Atan(speed / 5), Vector3.forward);
     if(!isLocalPlayer) {
       return;
     }
@@ -58,18 +66,16 @@ public class Player : NetworkBehaviour {
     var pos = transform.position;
     speed -= gravity * Time.deltaTime;
 
-    if(alive && (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0)) {
+    if(Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0) {
       Jump();
     }
 
-    if(alive && debug && pos.y < -5) {
+    if(debug && pos.y < -5) {
       Jump();
     }
 
     pos.y += speed * Time.deltaTime;
-    transform.position = pos;
-    
-    transform.rotation = Quaternion.AngleAxis(Mathf.Rad2Deg * Mathf.Atan(speed / 3), Vector3.forward);
+    transform.position = pos; 
   }
 
   private void OnTriggerEnter2D(Collider2D collision) {
@@ -78,5 +84,9 @@ public class Player : NetworkBehaviour {
     } catch {
       collision.transform.parent.GetComponent<IObstacle>().Execute(this);
     }
+  }
+
+  private void OnDestroy() {
+    EMGInput.UnsubscribeFromSinglePulse(Jump);
   }
 }
