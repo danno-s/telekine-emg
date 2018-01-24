@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1544499687085404}
+  m_IsPrefabParent: 1
+--- !u!1 &1544499687085404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4474675662115872}
+  - component: {fileID: 114453252074894530}
+  - component: {fileID: 114579895010839290}
+  m_Layer: 0
+  m_Name: Bird Network Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4474675662115872
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544499687085404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114453252074894530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544499687085404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b65d81ba40206946bf5976e454e1720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NetworkPort: 22403
+  m_ServerBindToIP: 0
+  m_ServerBindAddress: 
+  m_NetworkAddress: localhost
+  m_DontDestroyOnLoad: 1
+  m_RunInBackground: 1
+  m_ScriptCRCCheck: 1
+  m_MaxDelay: 0.01
+  m_LogLevel: 2
+  m_PlayerPrefab: {fileID: 0}
+  m_AutoCreatePlayer: 1
+  m_PlayerSpawnMethod: 0
+  m_OfflineScene: Main Menu
+  m_OnlineScene: Birds
+  m_SpawnPrefabs:
+  - {fileID: 1770328814035062, guid: 054d589af5387734fbd7ce28e4297eaf, type: 2}
+  - {fileID: 1156327378452110, guid: a0073957c7f327946ae95cf2938ab59d, type: 2}
+  - {fileID: 1508976246638930, guid: 6a527574eb8a3e941a78947f5c429557, type: 2}
+  - {fileID: 1508976246638930, guid: 8365d9281f0c54244a2f28564cb85458, type: 2}
+  - {fileID: 1508976246638930, guid: d8ba80f08dd70cd4eaae2215f6f0caa4, type: 2}
+  - {fileID: 1508976246638930, guid: 0ef6d41cad0a0664088e250c32471d44, type: 2}
+  - {fileID: 1614923641563328, guid: 5eea2a88cbfa92749aec47e41f1a089d, type: 2}
+  - {fileID: 1614923641563328, guid: 94f46af532eb1fc42915df4dfa4b1788, type: 2}
+  - {fileID: 1026247299765690, guid: 896548ad329a6794ca844e3c26875949, type: 2}
+  - {fileID: 1759265396903830, guid: 6c785975fadbfd64b881c3d6c5076bb9, type: 2}
+  - {fileID: 1487642044963422, guid: 1811185623455be459d50745dea72cab, type: 2}
+  - {fileID: 1099924615059002, guid: 1dbca647c6fbd724aaaf75b9be28bb1b, type: 2}
+  - {fileID: 1756935298857912, guid: bec080604372d5b4293a90d635273fc1, type: 2}
+  - {fileID: 1673239969415606, guid: a3b6f1e1ec358f14d8562cb2c961a0a2, type: 2}
+  - {fileID: 1556588197919476, guid: e6e648beb15ec2a4494c613a2674cf79, type: 2}
+  m_CustomConfig: 1
+  m_MaxConnections: 4
+  m_ConnectionConfig:
+    m_PacketSize: 1440
+    m_FragmentSize: 500
+    m_ResendTimeout: 1200
+    m_DisconnectTimeout: 2000
+    m_ConnectTimeout: 2000
+    m_MinUpdateTimeout: 10
+    m_PingTimeout: 500
+    m_ReducedPingTimeout: 100
+    m_AllCostTimeout: 20
+    m_NetworkDropThreshold: 5
+    m_OverflowDropThreshold: 5
+    m_MaxConnectionAttempt: 10
+    m_AckDelay: 33
+    m_SendDelay: 10
+    m_MaxCombinedReliableMessageSize: 100
+    m_MaxCombinedReliableMessageCount: 10
+    m_MaxSentMessageQueueSize: 512
+    m_AcksType: 1
+    m_UsePlatformSpecificProtocols: 0
+    m_InitialBandwidth: 0
+    m_BandwidthPeakFactor: 2
+    m_WebSocketReceiveBufferMaxSize: 0
+    m_UdpSocketReceiveBufferMaxSize: 0
+    m_SSLCertFilePath: 
+    m_SSLPrivateKeyFilePath: 
+    m_SSLCAFilePath: 
+    m_Channels: []
+  m_GlobalConfig:
+    m_ThreadAwakeTimeout: 1
+    m_ReactorModel: 0
+    m_ReactorMaximumReceivedMessages: 1024
+    m_ReactorMaximumSentMessages: 1024
+    m_MaxPacketSize: 2000
+    m_MaxHosts: 16
+    m_ThreadPoolSize: 1
+    m_MinTimerTimeout: 1
+    m_MaxTimerTimeout: 12000
+    m_MinNetSimulatorTimeout: 1
+    m_MaxNetSimulatorTimeout: 12000
+  m_Channels: 0500000000000000
+  m_UseWebSockets: 0
+  m_UseSimulator: 0
+  m_SimulatedLatency: 1
+  m_PacketLossPercentage: 0
+  m_MaxBufferedPackets: 16
+  m_AllowFragmentation: 1
+  m_MatchHost: mm.unet.unity3d.com
+  m_MatchPort: 443
+  matchName: default
+  matchSize: 3
+  isNetworkActive: 0
+  matchMaker: {fileID: 0}
+  networkDiscovery: {fileID: 114579895010839290}
+  debug: {fileID: 0}
+  wait: 1.5
+  playerPrefabs:
+  - {fileID: 1770328814035062, guid: 054d589af5387734fbd7ce28e4297eaf, type: 2}
+  - {fileID: 1156327378452110, guid: a0073957c7f327946ae95cf2938ab59d, type: 2}
+--- !u!114 &114579895010839290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544499687085404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1cd87dd41273144be15b70c2f99a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BroadcastPort: 47777
+  m_BroadcastKey: 2222
+  m_BroadcastVersion: 1
+  m_BroadcastSubVersion: 1
+  m_BroadcastInterval: 1000
+  m_UseNetworkManager: 0
+  m_BroadcastData: HELLO
+  m_ShowGUI: 0
+  m_OffsetX: 0
+  m_OffsetY: 0
+  connected: 0

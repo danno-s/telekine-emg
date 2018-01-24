@@ -20,7 +20,6 @@ public class Layer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
     foreach(Transform screen in transform) {
       screen.gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
     }

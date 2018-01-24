@@ -163,6 +163,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4325491574919598}
+  - component: {fileID: 114749250721450122}
+  - component: {fileID: 114757534639298708}
   m_Layer: 0
   m_Name: Gate
   m_TagString: Untagged
@@ -511,6 +513,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 5}
   m_EdgeRadius: 0
+--- !u!114 &114749250721450122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673239969415606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 163
+    i1: 182
+    i2: 241
+    i3: 225
+    i4: 236
+    i5: 53
+    i6: 143
+    i7: 20
+    i8: 216
+    i9: 86
+    i10: 44
+    i11: 178
+    i12: 201
+    i13: 97
+    i14: 160
+    i15: 162
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114757534639298708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673239969415606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a9c025c14ad114ebe940a6e713567f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 7
+  maxAperture: 5
+  startAperture: 0.15
 --- !u!212 &212141207039602016
 SpriteRenderer:
   m_ObjectHideFlags: 1

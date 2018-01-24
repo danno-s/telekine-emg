@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1614923641563328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,21 +53,21 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &114128098714254188
 MonoBehaviour:
@@ -101,14 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c340d922efad9f44f8d817936020cfbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  team: 0
-  moveSpeed: 5
-  pipes:
-  - {fileID: 1508976246638930, guid: 6a527574eb8a3e941a78947f5c429557, type: 2}
-  - {fileID: 1508976246638930, guid: 8365d9281f0c54244a2f28564cb85458, type: 2}
-  - {fileID: 1508976246638930, guid: d8ba80f08dd70cd4eaae2215f6f0caa4, type: 2}
-  - {fileID: 1508976246638930, guid: 0ef6d41cad0a0664088e250c32471d44, type: 2}
+  team: 1
 --- !u!114 &114781851843888506
 MonoBehaviour:
   m_ObjectHideFlags: 1

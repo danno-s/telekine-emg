@@ -2,8 +2,110 @@
 
 <Level>
   <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>15</Distance>
+    <Height>3.25</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>15</Distance>
+    <Height>-3.25</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Yellow</Prefab>
+    <Distance>15</Distance>
+    <Speed>10</Speed>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Yellow</Prefab>
+    <Distance>20</Distance>
+    <Speed>10</Speed>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>27</Distance>
+    <Height>-3.25</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>27</Distance>
+    <Height>3.25</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>38</Distance>
+    <Height>3.25</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>38</Distance>
+    <Height>-3.25</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>42</Distance>
+    <Height>3.25</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>42</Distance>
+    <Height>-3.25</Height>
+  </Object>
+
+  <Object>
     <Prefab>Pipe Up Pink</Prefab>
-    <Distance>5</Distance>
-    <Height>2</Height>
+    <Distance>44</Distance>
+    <Height>-0.5</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Blue</Prefab>
+    <Distance>44</Distance>
+    <Height>0.5</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>45</Distance>
+    <Height>3.25</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>45</Distance>
+    <Height>3.75</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>45</Distance>
+    <Height>2.75</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>45</Distance>
+    <Height>-3.25</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>45</Distance>
+    <Height>-3.75</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>45</Distance>
+    <Height>-2.75</Height>
   </Object>
 </Level>

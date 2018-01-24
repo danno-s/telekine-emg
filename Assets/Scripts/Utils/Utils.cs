@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class Utils {
   private static Utils instance;
-  private static Random rng;
+  private static System.Random rng;
   
   private Utils() {
-    rng = new Random();
+    rng = new System.Random();
   }
 
   public static T GetRandomFromList<T>(List<T> list) {
@@ -22,5 +23,12 @@ public class Utils {
     var element = list[index];
     list.RemoveAt(index);
     return element;
+  }
+
+  public static Transform NavigateToPrefabRoot(Transform child) {
+    Transform current = child;
+    if(current.parent == null || current.parent == current.root)
+      return current;
+    return NavigateToPrefabRoot(current.parent);
   }
 }

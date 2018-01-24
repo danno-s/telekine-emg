@@ -1,38 +1,38 @@
 ﻿using System.Linq;
 using System.Xml.Linq;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class LevelScript : Script {
   public delegate void ScriptCallback();
-  private Stack<Spawn> spawns;
+  private Stack<List<Spawn>> spawns;
 
   public LevelScript(string path) {
-    spawns = new Stack<Spawn>();
+    spawns = new Stack<List<Spawn>>();
     XElement level = XElement.Load(path);
-    IEnumerable<Spawn> objects =
+    var objects =
       from obj in level.Descendants("Object")
       let distance = float.Parse(obj.Element("Distance").Value)
       orderby distance descending
-      select new Spawn(
-          obj.Element("Prefab").Value,
-          distance,
-          float.Parse(obj.Element("Height").Value)
-        );
+      group obj by distance into grp
+      select SpawnFactory.Create(grp);
 
-    foreach(var spawn in objects)
-      spawns.Push(spawn);
+    foreach(var batch in objects) {
+      spawns.Push(batch);
+    }
   }
 
   public virtual bool ShouldSpawn(float distance, ScriptCallback callback) {
     try {
-      return distance >= spawns.Peek().distance;
+      // all elements in the batch have the same distance
+      return distance >= spawns.Peek()[0].distance;
     } catch {
       callback();
       return false;
     }
   }
 
-  public virtual Spawn PopSpawn() {
+  public virtual List<Spawn> PopSpawns() {
     return spawns.Pop();
   }
 }

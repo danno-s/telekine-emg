@@ -10,10 +10,10 @@ public class Player : NetworkBehaviour {
   public Team team;
   public bool debug;
   private bool alive;
-
   [SyncVar]
   public float speed;
   private Animator animator;
+  private Score scoreboard;
   
   // Use this for initialization
   void Start() {
@@ -22,6 +22,8 @@ public class Player : NetworkBehaviour {
       return;
     }
 
+    scoreboard = FindObjectOfType<Score>();
+
     EMGInput.SubscribeToSinglePulse(Jump);
     EMGInput.SubscribeToContinuousPulse(Glide);
 
@@ -29,6 +31,10 @@ public class Player : NetworkBehaviour {
     alive = true;
 
     speed = jumpSpeed;
+  }
+
+  internal void EatApple() {
+    scoreboard.AddPoints(150);
   }
 
   internal void Jump() {
@@ -74,11 +80,7 @@ public class Player : NetworkBehaviour {
   }
 
   private void OnTriggerEnter2D(Collider2D collision) {
-    try {
-      collision.GetComponent<IObstacle>().Execute(this);
-    } catch {
-      collision.transform.parent.GetComponent<IObstacle>().Execute(this);
-    }
+    Utils.NavigateToPrefabRoot(collision.transform).GetComponent<IObstacle>().Execute(this);
   }
 
   private void OnDestroy() {

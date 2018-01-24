@@ -2,5 +2,5 @@
 
 public enum Team
 {
-	PINK, BLUE, YELLOW
+	PINK = 1, BLUE = 2, YELLOW = 4, ANY = 7
 }

@@ -4,15 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.Networking.NetworkSystem;
+using UnityEngine.SceneManagement;
 
 public class BirdNetworkManager : NetworkManager {
   public EmgNetworkDiscovery networkDiscovery;
   public Text debug;
+  public float wait;
   public List<GameObject> playerPrefabs;
   float time;
 
   private void Start() {
     networkDiscovery.Initialize();
+    if(SceneManager.GetActiveScene().name == "Birds") {
+      StartHost();
+    }
   }
 
   public override void OnStartHost() {
@@ -24,7 +29,7 @@ public class BirdNetworkManager : NetworkManager {
     if(networkDiscovery.running && networkDiscovery.isClient)
       time += Time.deltaTime;
 
-    if(time > 5.0 && !networkDiscovery.connected) {
+    if(time > wait && !networkDiscovery.connected) {
       time = 0f;
       networkDiscovery.StopBroadcast();
       StartHost();

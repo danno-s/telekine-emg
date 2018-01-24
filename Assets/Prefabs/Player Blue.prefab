@@ -174,9 +174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 12.5
   jumpSpeed: 5
-  team: 1
+  team: 2
   debug: 1
-  hpBar: {fileID: 114991925953399934, guid: 7ab994205969f2f44b08fcb2771cf5b9, type: 2}
   speed: 0
 --- !u!212 &212136484064161090
 SpriteRenderer:

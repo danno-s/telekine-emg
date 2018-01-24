@@ -2,18 +2,17 @@
 using UnityEngine.Networking;
 using System.Collections;
 
-public class Pipe : AbstractObstacle {
-  public Team team;
+public abstract class Pipe : AbstractObstacle {
+  protected float retractSpeed = 5;
+  protected bool retracting = false;
   
   public override void Execute(Player player) {
-    if(player.isLocalPlayer && player.team == team) {
+    if(player.isLocalPlayer && Matches(player)) {
       player.Hit();
     }
   }
 
-  public void Update() {
-    var pos = transform.position;
-    pos.x -= speed * Time.deltaTime;
-    transform.position = pos;
+  public override void Activate() {
+    retracting = true;
   }
 }

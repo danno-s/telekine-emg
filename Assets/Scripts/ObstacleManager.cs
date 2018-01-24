@@ -26,13 +26,7 @@ public class ObstacleManager : NetworkBehaviour {
 
     // Read script
     if(script.ShouldSpawn(distance, ChangeScripts)) {
-      SpawnObstacle(script.PopSpawn());
-    }
-
-    // Kill useless children
-    foreach(Transform child in transform) {
-      if(child.GetComponent<IObstacle>().CanBeDestroyed())
-        Destroy(child.gameObject);
+      SpawnObstacles(script.PopSpawns());
     }
 	}
 
@@ -43,17 +37,20 @@ public class ObstacleManager : NetworkBehaviour {
     } catch {
       script = new NullScript();
     }
+
+    distance = 0;
   }
 
   void OnDrawGizmosSelected() {
     Gizmos.DrawLine(transform.position + Vector3.up * height, transform.position - Vector3.up * height);
   }
 
-  void SpawnObstacle(Spawn spawn) {
-    GameObject obj = Instantiate(spawn.prefab, transform);
-    var pos = obj.transform.position;
-    pos.y = spawn.height;
-    obj.transform.position = pos;
-    NetworkServer.Spawn(obj);
+  void SpawnObstacles(List<Spawn> batch) {
+    foreach(var spawn in batch) {
+      List<GameObject> objects = spawn.Activate(transform);
+      foreach(var obj in objects) {
+        NetworkServer.Spawn(obj);
+      }
+    }
   }
 }
