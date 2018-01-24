@@ -168,6 +168,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114596325242438330, guid: 674e034391cfc624fb9387481d66728a,
+        type: 2}
+      propertyPath: levels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4957419565109494, guid: 674e034391cfc624fb9387481d66728a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -205,6 +210,16 @@ Prefab:
       propertyPath: parallax
       value: 
       objectReference: {fileID: 269871312}
+    - target: {fileID: 114596325242438330, guid: 674e034391cfc624fb9387481d66728a,
+        type: 2}
+      propertyPath: levels.Array.data[0]
+      value: Birds_01.xml
+      objectReference: {fileID: 0}
+    - target: {fileID: 114596325242438330, guid: 674e034391cfc624fb9387481d66728a,
+        type: 2}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 674e034391cfc624fb9387481d66728a, type: 2}
   m_IsPrefabParent: 0

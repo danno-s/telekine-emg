@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4884267522548066}
   - component: {fileID: 114594008053053984}
   - component: {fileID: 212942764917975748}
-  - component: {fileID: 114565140815188502}
   - component: {fileID: 61369035432981396}
+  - component: {fileID: 114573340595266228}
   - component: {fileID: 114675536581837992}
   m_Layer: 0
-  m_Name: Pipe Up Blue
+  m_Name: Pipe Up Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.5, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114565140815188502
+--- !u!114 &114573340595266228
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -107,11 +107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1508976246638930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc82b876f4f0d4c4f9ce4062f5fecd18, type: 3}
+  m_Script: {fileID: 11500000, guid: 25508f0677c1bdd41b3c13f587bc66c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  team: 1
+  speed: 5
+  team: 0
 --- !u!114 &114594008053053984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 1
-  m_SendInterval: 0.1
+  m_SendInterval: 0.09090909
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -147,22 +147,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 216
-    i1: 186
-    i2: 128
-    i3: 240
-    i4: 141
-    i5: 215
-    i6: 12
-    i7: 212
-    i8: 234
-    i9: 174
-    i10: 34
-    i11: 21
-    i12: 246
-    i13: 240
-    i14: 202
-    i15: 164
+    i0: 106
+    i1: 82
+    i2: 117
+    i3: 116
+    i4: 235
+    i5: 138
+    i6: 62
+    i7: 148
+    i8: 26
+    i9: 120
+    i10: 148
+    i11: 127
+    i12: 92
+    i13: 66
+    i14: 149
+    i15: 87
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
 --- !u!212 &212003481347801542
@@ -199,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300056, guid: f29ba6706cfd3b847b851e39413b6681, type: 3}
+  m_Sprite: {fileID: 21300040, guid: f29ba6706cfd3b847b851e39413b6681, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300046, guid: f29ba6706cfd3b847b851e39413b6681, type: 3}
+  m_Sprite: {fileID: 21300054, guid: f29ba6706cfd3b847b851e39413b6681, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

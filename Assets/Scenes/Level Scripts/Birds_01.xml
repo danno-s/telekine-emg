@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Level>
+  <Object>
+    <Prefab>Pipe Up Pink</Prefab>
+    <Distance>5</Distance>
+    <Height>2</Height>
+  </Object>
+</Level>

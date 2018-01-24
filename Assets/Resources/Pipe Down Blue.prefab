@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4884267522548066}
   - component: {fileID: 114594008053053984}
   - component: {fileID: 212942764917975748}
-  - component: {fileID: 114884446851475456}
   - component: {fileID: 61369035432981396}
+  - component: {fileID: 114983815644152280}
   - component: {fileID: 114675536581837992}
   m_Layer: 0
-  m_Name: Pipe Up Pink
+  m_Name: Pipe Down Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,14 +66,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1508976246638930}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4026504329426792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!61 &61369035432981396
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 1
-  m_SendInterval: 0.09090909
+  m_SendInterval: 0.1
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -134,25 +134,25 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 106
-    i1: 82
-    i2: 117
-    i3: 116
-    i4: 235
-    i5: 138
-    i6: 62
-    i7: 148
-    i8: 26
-    i9: 120
-    i10: 148
-    i11: 127
-    i12: 92
-    i13: 66
-    i14: 149
-    i15: 87
+    i0: 14
+    i1: 246
+    i2: 212
+    i3: 28
+    i4: 173
+    i5: 10
+    i6: 6
+    i7: 100
+    i8: 8
+    i9: 142
+    i10: 37
+    i11: 12
+    i12: 50
+    i13: 71
+    i14: 29
+    i15: 68
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
---- !u!114 &114884446851475456
+--- !u!114 &114983815644152280
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -160,11 +160,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1508976246638930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc82b876f4f0d4c4f9ce4062f5fecd18, type: 3}
+  m_Script: {fileID: 11500000, guid: b94c0de59239934408ea4f00c82046e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  team: 0
+  speed: 5
+  team: 1
 --- !u!212 &212003481347801542
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -199,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300040, guid: f29ba6706cfd3b847b851e39413b6681, type: 3}
+  m_Sprite: {fileID: 21300056, guid: f29ba6706cfd3b847b851e39413b6681, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300054, guid: f29ba6706cfd3b847b851e39413b6681, type: 3}
+  m_Sprite: {fileID: 21300046, guid: f29ba6706cfd3b847b851e39413b6681, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

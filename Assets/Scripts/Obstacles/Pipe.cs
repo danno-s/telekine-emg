@@ -2,7 +2,7 @@
 using UnityEngine.Networking;
 using System.Collections;
 
-public abstract class Pipe : AbstractObstacle {
+public class Pipe : AbstractObstacle {
   public Team team;
   
   public override void Execute(Player player) {
