@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 252683993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5cc83faad66424ba1815125e7608dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 08bce1d1878d61145a94d33a940f9eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 341460178}
@@ -397,7 +397,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1303788776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 252683994}
@@ -619,9 +619,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1795916499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbc5a66b0a1628846970e41a73520cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c1ea3058134802418e2fc1a83f48c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 252683995}
-  calibratingColor: {r: 0.11094291, g: 0.83823526, b: 0.44700217, a: 1}
-  readingColor: {r: 0.0726062, g: 0.5485801, b: 0.292539, a: 1}
+  calibratingColor: {r: 0.2863604, g: 0.824138, b: 0.2863604, a: 1}
+  readingColor: {r: 0.18854254, g: 0.54262066, b: 0.18854254, a: 1}

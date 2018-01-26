@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Level level = "99">
+  <Object offset = "5">
+    <Prefab>Score Update</Prefab>
+    <Distance>5</Distance>
+  </Object>
+</Level>

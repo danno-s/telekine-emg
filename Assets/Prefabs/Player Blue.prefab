@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 114431586660278392}
   - component: {fileID: 50455734653524492}
   - component: {fileID: 61793149658962518}
-  - component: {fileID: 114527170605533722}
   - component: {fileID: 212136484064161090}
   - component: {fileID: 95355372558911734}
+  - component: {fileID: 114299842642468786}
   m_Layer: 0
   m_Name: Player Blue
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156327378452110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: -0, z: 0}
+  m_LocalPosition: {x: -6, y: -0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,6 +108,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114299842642468786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1156327378452110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79f1970f58059a49bf954094ab72802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: 12.5
+  jumpSpeed: 5
+  team: 2
+  debug: 1
+  speed: 0
 --- !u!114 &114431586660278392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,22 +177,6 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114527170605533722
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1156327378452110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a334210f1f8c1340bb91c9a334b8747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravity: 12.5
-  jumpSpeed: 5
-  team: 2
-  debug: 1
-  speed: 0
 --- !u!212 &212136484064161090
 SpriteRenderer:
   m_ObjectHideFlags: 1

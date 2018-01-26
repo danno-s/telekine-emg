@@ -49,10 +49,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544499687085404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b65d81ba40206946bf5976e454e1720, type: 3}
+  m_Script: {fileID: 11500000, guid: b7fa4a2ce0cade24baf5374136d22a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NetworkPort: 22403
+  m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
   m_NetworkAddress: localhost
@@ -69,20 +69,21 @@ MonoBehaviour:
   m_SpawnPrefabs:
   - {fileID: 1770328814035062, guid: 054d589af5387734fbd7ce28e4297eaf, type: 2}
   - {fileID: 1156327378452110, guid: a0073957c7f327946ae95cf2938ab59d, type: 2}
+  - {fileID: 1487642044963422, guid: 1811185623455be459d50745dea72cab, type: 2}
+  - {fileID: 1099924615059002, guid: 1dbca647c6fbd724aaaf75b9be28bb1b, type: 2}
+  - {fileID: 1756935298857912, guid: bec080604372d5b4293a90d635273fc1, type: 2}
   - {fileID: 1508976246638930, guid: 6a527574eb8a3e941a78947f5c429557, type: 2}
   - {fileID: 1508976246638930, guid: 8365d9281f0c54244a2f28564cb85458, type: 2}
   - {fileID: 1508976246638930, guid: d8ba80f08dd70cd4eaae2215f6f0caa4, type: 2}
   - {fileID: 1508976246638930, guid: 0ef6d41cad0a0664088e250c32471d44, type: 2}
-  - {fileID: 1614923641563328, guid: 5eea2a88cbfa92749aec47e41f1a089d, type: 2}
-  - {fileID: 1614923641563328, guid: 94f46af532eb1fc42915df4dfa4b1788, type: 2}
   - {fileID: 1026247299765690, guid: 896548ad329a6794ca844e3c26875949, type: 2}
   - {fileID: 1759265396903830, guid: 6c785975fadbfd64b881c3d6c5076bb9, type: 2}
-  - {fileID: 1487642044963422, guid: 1811185623455be459d50745dea72cab, type: 2}
-  - {fileID: 1099924615059002, guid: 1dbca647c6fbd724aaaf75b9be28bb1b, type: 2}
-  - {fileID: 1756935298857912, guid: bec080604372d5b4293a90d635273fc1, type: 2}
   - {fileID: 1673239969415606, guid: a3b6f1e1ec358f14d8562cb2c961a0a2, type: 2}
   - {fileID: 1556588197919476, guid: e6e648beb15ec2a4494c613a2674cf79, type: 2}
-  m_CustomConfig: 1
+  - {fileID: 1614923641563328, guid: 5eea2a88cbfa92749aec47e41f1a089d, type: 2}
+  - {fileID: 1614923641563328, guid: 94f46af532eb1fc42915df4dfa4b1788, type: 2}
+  - {fileID: 1903725561428986, guid: 9a4c26adb6092fd4f8f3f55ad17c261c, type: 2}
+  m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
     m_PacketSize: 1440
@@ -124,7 +125,7 @@ MonoBehaviour:
     m_MaxTimerTimeout: 12000
     m_MinNetSimulatorTimeout: 1
     m_MaxNetSimulatorTimeout: 12000
-  m_Channels: 0500000000000000
+  m_Channels: 
   m_UseWebSockets: 0
   m_UseSimulator: 0
   m_SimulatedLatency: 1
@@ -139,7 +140,7 @@ MonoBehaviour:
   matchMaker: {fileID: 0}
   networkDiscovery: {fileID: 114579895010839290}
   debug: {fileID: 0}
-  wait: 1.5
+  wait: 5
   playerPrefabs:
   - {fileID: 1770328814035062, guid: 054d589af5387734fbd7ce28e4297eaf, type: 2}
   - {fileID: 1156327378452110, guid: a0073957c7f327946ae95cf2938ab59d, type: 2}
@@ -151,7 +152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544499687085404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b1cd87dd41273144be15b70c2f99a4a, type: 3}
+  m_Script: {fileID: 11500000, guid: aa979cc6db535ba46b537585c3a8a334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_BroadcastPort: 47777

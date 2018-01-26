@@ -15,8 +15,12 @@ internal class SpawnFactory {
   public static Spawn Create(XElement obj) {
     Spawn result;
     float distance, height;
-    DefaultParse(obj, out distance, out height);
+
+    ParseField(obj, "Distance", out distance);
+    ParseField(obj, "Height", out height);
+
     string prefab = obj.Element("Prefab").Value;
+
     if(prefab.StartsWith("Switch")) {
       var links =
         from target in obj.Descendants("Link")
@@ -27,32 +31,27 @@ internal class SpawnFactory {
         from target in obj.Descendants("Switch")
         select Create(target);
       result = new GateSpawn(prefab, distance, height, switches.ToList());
+      ((GateSpawn) result).SetAperture(float.Parse(obj.Element("Aperture").Value));
     } else {
       result = new Spawn(prefab, distance, height);
-    }
-
-    if(obj.HasAttributes) {
-      result.SetOffset(float.Parse(obj.Attribute("offset").Value));
     }
 
     if(obj.Elements("Speed").Any()) {
       result.SetSpeed(float.Parse(obj.Element("Speed").Value));
     }
 
+    if(obj.HasAttributes) {
+      result.SetOffset(float.Parse(obj.Attribute("offset").Value));
+    }
+    
     return result;
   }
 
-  private static void DefaultParse(XElement obj, out float distance, out float height, float def = 0) {
+  private static void ParseField(XElement obj, string field, out float value, float def = 0) {
     try {
-      distance = float.Parse(obj.Element("Distance").Value);
+      value = float.Parse(obj.Element(field).Value);
     } catch {
-      distance = def;
-    }
-
-    try {
-      height = float.Parse(obj.Element("Height").Value);
-    } catch {
-      height = def;
+      value = def;
     }
   }
 }

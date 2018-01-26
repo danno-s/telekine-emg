@@ -81,12 +81,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1532056438505812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64b925b09d19c874086d148665288609, type: 3}
+  m_Script: {fileID: 11500000, guid: f0ced472ed3091e41b5a7ec805a69ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   height: 5
-  pipes: []
-  switches: []
-  gaps: []
+  speed: 5
   parallax: {fileID: 0}
-  speed: 0
+  levels:
+  - Birds_01
+  - Birds_02
+  betweenLevels: Birds_00
