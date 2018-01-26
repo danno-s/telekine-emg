@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Apple : AbstractObstacle {
   public override void Execute(Player player) {
-    if(player.isLocalPlayer && Matches(player)) {
+    if(Matches(player)) {
       GetComponent<SpriteRenderer>().enabled = false;
       var ps = GetComponent<ParticleSystem>();
       ps.Play();
       Destroy(gameObject, ps.main.startLifetime.constant);
-      player.EatApple();
+      if(player.isLocalPlayer)
+        player.EatApple();
     }
   }
 
