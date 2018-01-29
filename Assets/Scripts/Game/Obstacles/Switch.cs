@@ -8,11 +8,12 @@ public class Switch : AbstractObstacle {
   private bool active = false;
   private List<IObstacle> links = new List<IObstacle>();
 
-  public override void Execute(Player player) {
+  public override void Execute(Player player, BoxCollider2D collider) {
     if(isServer && Matches(player)) {
       foreach(var link in links) {
         link.Activate();
       }
+      player.ScorePoints (50);
     }
   }
 

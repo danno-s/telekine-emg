@@ -155,6 +155,8 @@ MonoBehaviour:
   jumpSpeed: 5
   team: 1
   debug: 1
+  disabledTime: 3
+  invulnFrames: 60
   speed: 0
 --- !u!114 &114928246366475364
 MonoBehaviour:

@@ -2,6 +2,9 @@
 using UnityEngine.Networking;
 using System.Collections.Generic;
 
+/// <summary>
+/// Class representing an object to be spawned later. It contains when it should spawn and where.
+/// </summary>
 public class Spawn {
   public GameObject prefab;
   public float distance, height, offset, speed = 5;
@@ -20,6 +23,11 @@ public class Spawn {
     this.speed = speed;
   }
 
+  /// <summary>
+  /// Create the object and set its initial values.
+  /// </summary>
+  /// <param name="manager">Manager.</param>
+  /// <returns>A List of the spawned objects</returns>
   public virtual List<GameObject> Activate(Transform manager) {
     var obj = GameObject.Instantiate(prefab, manager);
     var pos = obj.transform.position;
@@ -32,6 +40,10 @@ public class Spawn {
     return new List<GameObject>() { obj };
   }
 
+  /// <summary>
+  /// Returns a <see cref="System.String"/> that represents the current <see cref="Spawn"/>.
+  /// </summary>
+  /// <returns>A <see cref="System.String"/> that represents the current <see cref="Spawn"/>.</returns>
   public override string ToString() {
     string offset = "";
     if(this.offset != 0)

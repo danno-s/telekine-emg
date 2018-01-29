@@ -1,9 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Level level = "2">
+
+  <Object>
+    <Prefab>Switch Pink</Prefab>
+    <Distance>5</Distance>
+    <Height>2</Height>
+    <Link offset = "5">
+      <Prefab>Pipe Up Pink</Prefab>
+      <Height>-1</Height>
+    </Link>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>4.5</Distance>
+    <Height>2</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>5.5</Distance>
+    <Height>2</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>5</Distance>
+    <Height>2.5</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>5</Distance>
+    <Height>1.5</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>4.5</Distance>
+    <Height>-2</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>5.5</Distance>
+    <Height>-2</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>5</Distance>
+    <Height>-2.5</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>5</Distance>
+    <Height>-1.5</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Switch Blue</Prefab>
+    <Distance>5</Distance>
+    <Height>-2</Height>
+    <Link offset = "5">
+      <Prefab>Pipe Down Blue</Prefab>
+      <Height>1</Height>
+    </Link>
+  </Object>
+
   <Object offset = "0">
     <Prefab>Gate</Prefab>
-    <Distance>8</Distance>
+    <Distance>25</Distance>
     <Speed>1</Speed>
     <Aperture>3</Aperture>
 
@@ -30,27 +93,5 @@
       <Prefab>Gate Switch</Prefab>
       <Height>0</Height>
     </Switch>
-  </Object>
-
-  <Object>
-    <Prefab>Apple Pink</Prefab>
-    <Distance>10</Distance>
-    <Height>0.5</Height>
-  </Object>
-  <Object>
-    <Prefab>Apple Blue</Prefab>
-    <Distance>10</Distance>
-    <Height>-0.5</Height>
-  </Object>
-
-  <Object>
-    <Prefab>Apple Pink</Prefab>
-    <Distance>12</Distance>
-    <Height>1.5</Height>
-  </Object>
-  <Object>
-    <Prefab>Apple Blue</Prefab>
-    <Distance>12</Distance>
-    <Height>-1.5</Height>
   </Object>
 </Level>

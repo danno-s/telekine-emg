@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 114431586660278392}
   - component: {fileID: 50455734653524492}
   - component: {fileID: 61793149658962518}
+  - component: {fileID: 114299842642468786}
   - component: {fileID: 212136484064161090}
   - component: {fileID: 95355372558911734}
-  - component: {fileID: 114299842642468786}
   m_Layer: 0
   m_Name: Player Blue
   m_TagString: Untagged
@@ -123,6 +123,8 @@ MonoBehaviour:
   jumpSpeed: 5
   team: 2
   debug: 1
+  disabledTime: 3
+  invulnFrames: 60
   speed: 0
 --- !u!114 &114431586660278392
 MonoBehaviour:

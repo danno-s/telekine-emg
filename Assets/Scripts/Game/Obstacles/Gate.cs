@@ -1,34 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Gate : AbstractObstacle {
+  [SyncVar]
   public float maxAperture, startAperture = 0.15f;
-  private List<GateSwitch> switches = new List<GateSwitch>();
-  private int maxHp, currentHp;
-  private Transform pipeUp, pipeDown;
+  [SyncVar]
+  public int maxHp, currentHp;
   private float threshold = float.PositiveInfinity, segment;
+  private List<GateSwitch> switches = new List<GateSwitch>();
+  private Transform pipeUp, pipeDown;
 
-  private void Start() {
+  public override void OnStartClient() {
+    base.OnStartClient();
+
     pipeUp = transform.GetChild(0);
     pipeDown = transform.GetChild(1);
 
-    maxHp = switches.Count > 0 ? switches.Count : 1;
     currentHp = maxHp;
-
+    
     segment = (maxAperture - startAperture) / maxHp / 2;
     threshold = pipeDown.position.y + segment;
   }
 
-  public void Subscribe(IObstacle obstacle) {
-    var aSwitch = obstacle as GateSwitch;
+  public void Subscribe(GateSwitch aSwitch) {
     switches.Add(aSwitch);
-    aSwitch.Link(this);
   }
 
-  public override void Execute(Player player) {
-    if(Matches(player))
-      player.Hit();
+  public override void Execute(Player player, BoxCollider2D collider) {
+    if (player.isLocalPlayer && Matches (player)) {
+      if (collider == scoreArea)
+        player.ScorePoints (300);
+      else
+        player.Hit ();
+    }
   }
 
   public void SwitchActivated(GateSwitch gateSwitch) {
@@ -62,5 +68,11 @@ public class Gate : AbstractObstacle {
     var downPos = pipeDown.position;
     downPos.y += speed * Time.deltaTime;
     pipeDown.position = downPos;
+
+    var currentGap = downPos.y - upPos.y - 1f;
+    Debug.Log (currentGap);
+    var size = scoreArea.size;
+    size.y = currentGap;
+    scoreArea.size = size;
   }
 }

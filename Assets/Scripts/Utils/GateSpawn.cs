@@ -14,11 +14,13 @@ internal class GateSpawn : Spawn {
     var objects = base.Activate(manager);
     var gate = objects[0];
 
-    gate.GetComponent<Gate>().maxAperture = aperture;
+    var g = gate.GetComponent<Gate>();
+    g.maxAperture = aperture;
+    g.maxHp = switches.Count;
+
     for(int i = 0; i < switches.Count; i++) {
       var nextObject = switches[i].Activate(manager);
       objects.AddRange(nextObject);
-      gate.GetComponent<Gate>().Subscribe(nextObject[0].GetComponent<IObstacle>());
     }
 
     return objects;

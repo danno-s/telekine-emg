@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Apple : AbstractObstacle {
-  public override void Execute(Player player) {
+  public override void Execute(Player player, BoxCollider2D collider) {
     if(Matches(player)) {
       GetComponent<SpriteRenderer>().enabled = false;
       var ps = GetComponent<ParticleSystem>();

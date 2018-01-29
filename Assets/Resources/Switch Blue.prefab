@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 2
+  scoreArea: {fileID: 61891525237565060}
 --- !u!114 &114781851843888506
 MonoBehaviour:
   m_ObjectHideFlags: 1

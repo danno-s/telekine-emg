@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class EMGInput : MonoBehaviour {
   public int cooldownFrames, averageLength;
   public delegate void Action();
+  new public bool enabled;
 
   private enum MuscleState { RELAXED, PULSED, HELD };
   
@@ -64,20 +65,22 @@ public class EMGInput : MonoBehaviour {
   }
 
   public void Update() {
-    float[] f = new float[(int) (max * Time.deltaTime)];
-    audioClip.GetOutputData(f, 0);
-    intensity = 0f;
-    foreach(var sample in f)
-      intensity = intensity < Math.Abs(sample) ? Math.Abs(sample) : intensity;
+    if(enabled) {
+      float[] f = new float[(int) (max * Time.deltaTime)];
+      audioClip.GetOutputData(f, 0);
+      intensity = 0f;
+      foreach(var sample in f)
+        intensity = intensity < Math.Abs(sample) ? Math.Abs(sample) : intensity;
 
-    lastValues.Add(intensity);
+      lastValues.Add(intensity);
 
-    if(lastValues.Count > averageLength)
-      lastValues.RemoveAt(0);
+      if(lastValues.Count > averageLength)
+        lastValues.RemoveAt(0);
     
-    CheckPulseStatus();
+      CheckPulseStatus();
     
-    cooldown--;
+      cooldown--;
+    }
   }
 
   private void CheckPulseStatus() {

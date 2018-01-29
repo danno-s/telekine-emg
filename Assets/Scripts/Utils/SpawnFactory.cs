@@ -3,6 +3,9 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class intended to create spawn objects from their XML description.
+/// </summary>
 internal class SpawnFactory {
   public static List<Spawn> Create(IEnumerable<XElement> group) {
     var list = new List<Spawn>();

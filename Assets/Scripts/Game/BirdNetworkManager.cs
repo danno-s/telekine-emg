@@ -20,6 +20,14 @@ public class BirdNetworkManager : NetworkManager {
     }
   }
 
+  public void CreateGame() {
+    StartHost();
+  }
+
+  public void FindGame() {
+    StartClient();
+  }
+
   public override void OnStartHost() {
     if(!networkDiscovery.StartAsServer())
       Log("Error enviando mensajes.");
@@ -38,7 +46,8 @@ public class BirdNetworkManager : NetworkManager {
   }
 
   public void Log(string message) {
-    debug.text = message;
+    if(debug != null)
+      debug.text = message;
   }
 
   public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId) {

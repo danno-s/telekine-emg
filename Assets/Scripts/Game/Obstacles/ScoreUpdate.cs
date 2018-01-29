@@ -15,7 +15,7 @@ public class ScoreUpdate : AbstractObstacle {
   private float time = 0;
   private int maxScore, highscore, level;
 
-  public override void Execute(Player player) {}
+  public override void Execute(Player player, BoxCollider2D collider) {}
 
   private void Start() {
     score = FindObjectOfType<Score>();

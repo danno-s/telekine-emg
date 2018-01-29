@@ -4,12 +4,18 @@ using System.Collections;
 public class GateSwitch : AbstractObstacle {
   private Gate gate;
 
-  public override void Execute(Player player) {
-    if(Matches(player))
-      gate.SwitchActivated(this);
+  public override void OnStartClient() {
+    base.OnStartClient();
+
+    gate = FindObjectOfType<Gate>();
+
+    gate.Subscribe(this);
   }
 
-  public void Link(Gate aGate) {
-    gate = aGate;
+  public override void Execute(Player player, BoxCollider2D collider) {
+    if (Matches (player)) {
+      gate.SwitchActivated (this);
+      player.ScorePoints (25);
+    }
   }
 }
