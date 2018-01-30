@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a9c025c14ad114ebe940a6e713567f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 7
+  team: -1
   scoreArea: {fileID: 61613862269645232}
   maxAperture: 5
   startAperture: 0.15

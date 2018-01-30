@@ -29,7 +29,7 @@ public class Gate : AbstractObstacle {
   }
 
   public override void Execute(Player player, BoxCollider2D collider) {
-    if (player.isLocalPlayer && Matches (player)) {
+    if (player.isLocalPlayer && Matches (player) && player.Active) {
       if (collider == scoreArea)
         player.ScorePoints (300);
       else
@@ -69,8 +69,7 @@ public class Gate : AbstractObstacle {
     downPos.y += speed * Time.deltaTime;
     pipeDown.position = downPos;
 
-    var currentGap = downPos.y - upPos.y - 1f;
-    Debug.Log (currentGap);
+    var currentGap = downPos.y - upPos.y - 1f;  
     var size = scoreArea.size;
     size.y = currentGap;
     scoreArea.size = size;

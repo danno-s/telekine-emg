@@ -163,8 +163,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 254067443}
-  - component: {fileID: 254067445}
   - component: {fileID: 254067444}
+  - component: {fileID: 254067445}
   m_Layer: 0
   m_Name: Dimmer
   m_TagString: Untagged
@@ -232,6 +232,74 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 134782473}
   m_Script: {fileID: 11500000, guid: c678bc852776e604596c791f072d1e44, type: 3}
+--- !u!1 &367521406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 367521408}
+  - component: {fileID: 367521407}
+  - component: {fileID: 367521409}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &367521407
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367521406}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &367521408
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367521406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &367521409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367521406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a980daace3293244fa8126100d43a81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: -1
+  scoreArea: {fileID: 0}
 --- !u!1001 &1028120331
 Prefab:
   m_ObjectHideFlags: 0
@@ -603,11 +671,6 @@ Prefab:
       propertyPath: parallax
       value: 
       objectReference: {fileID: 269871312}
-    - target: {fileID: 114596325242438330, guid: 674e034391cfc624fb9387481d66728a,
-        type: 2}
-      propertyPath: levels.Array.data[0]
-      value: Birds_02
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 674e034391cfc624fb9387481d66728a, type: 2}
   m_IsPrefabParent: 0

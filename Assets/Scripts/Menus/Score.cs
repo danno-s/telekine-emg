@@ -7,6 +7,7 @@ public class Score : MonoBehaviour {
   public GameObject popDown;
   private int score = 0;
   private Text scoreField;
+  private ScoreUpdate update;
 
   private void Start() {
     scoreField = GetComponent<Text>();
@@ -20,6 +21,10 @@ public class Score : MonoBehaviour {
 
   public void SetPoints(int points) {
     score = points;
+  }
+
+  public void TakePoints(int pointsTaken) {
+    SetPoints (score - pointsTaken);
   }
 
   public int Pop() {

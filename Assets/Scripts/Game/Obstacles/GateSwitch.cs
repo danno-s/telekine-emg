@@ -13,9 +13,11 @@ public class GateSwitch : AbstractObstacle {
   }
 
   public override void Execute(Player player, BoxCollider2D collider) {
-    if (Matches (player)) {
+    if (Matches (player) && player.Active) {
       gate.SwitchActivated (this);
-      player.ScorePoints (25);
+      if (player.isLocalPlayer) {
+        player.ScorePoints (25);
+      }
     }
   }
 }

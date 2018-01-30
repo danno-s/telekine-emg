@@ -4,6 +4,18 @@
   <!-- Pink Apple Trail -->
   <Object>
     <Prefab>Apple Pink</Prefab>
+    <Distance>5</Distance>
+    <Height>3</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>10</Distance>
+    <Height>3</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
     <Distance>15</Distance>
     <Height>3</Height>
   </Object>
@@ -45,6 +57,18 @@
   </Object>
 
   <!-- Blue Apple Trail -->
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>5</Distance>
+    <Height>-3</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>10</Distance>
+    <Height>-3</Height>
+  </Object>
+
   <Object>
     <Prefab>Apple Blue</Prefab>
     <Distance>15</Distance>
@@ -176,26 +200,247 @@
 
   <Object>
     <Prefab>Apple Blue</Prefab>
-    <Distance>85</Distance>
-    <Height>-3</Height>
+    <Distance>95</Distance>
+    <Height>3</Height>
   </Object>
 
   <Object>
     <Prefab>Gap Blue</Prefab>
+    <Distance>95</Distance>
+    <Height>3</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
     <Distance>85</Distance>
     <Height>-3</Height>
   </Object>
 
   <Object>
-    <Prefab>Apple Pink</Prefab>
-    <Distance>80</Distance>
+    <Prefab>Gap Pink</Prefab>
+    <Distance>85</Distance>
+    <Height>-3</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>108</Distance>
+    <Height>-5</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>109</Distance>
+    <Height>-4</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>110</Distance>
+    <Height>-3</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>111</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>112</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>113</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>114</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>115</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>116</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>117</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>118</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>119</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>120</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Up Blue</Prefab>
+    <Distance>121</Distance>
+    <Height>-2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>108</Distance>
+    <Height>5</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>109</Distance>
+    <Height>4</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>110</Distance>
     <Height>3</Height>
   </Object>
 
   <Object>
-    <Prefab>Gap Pink</Prefab>
-    <Distance>80</Distance>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>111</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>112</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>113</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>114</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>115</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>116</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>117</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>118</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>119</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>120</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Pipe Down Pink</Prefab>
+    <Distance>121</Distance>
+    <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>121.5</Distance>
+    <Height>-3</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>122</Distance>
+    <Height>-3</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>122.5</Distance>
+    <Height>-3</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>122</Distance>
+    <Height>-3.5</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>122</Distance>
+    <Height>-2.5</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>121.5</Distance>
     <Height>3</Height>
   </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>122</Distance>
+    <Height>3</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>122.5</Distance>
+    <Height>3</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>122</Distance>
+    <Height>3.5</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>122</Distance>
+    <Height>2.5</Height>
+  </Object>
+
 
 </Level>

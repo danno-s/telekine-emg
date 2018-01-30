@@ -14,6 +14,16 @@
 
   <Object>
     <Prefab>Apple Pink</Prefab>
+    <Distance>3.5</Distance>
+    <Height>2</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>4</Distance>
+    <Height>2</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
     <Distance>4.5</Distance>
     <Height>2</Height>
   </Object>
@@ -33,6 +43,17 @@
     <Height>1.5</Height>
   </Object>
 
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>3.5</Distance>
+    <Height>-2</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>4</Distance>
+    <Height>-2</Height>
+  </Object>
   <Object>
     <Prefab>Apple Blue</Prefab>
     <Distance>4.5</Distance>
@@ -72,26 +93,175 @@
 
     <!-- Switch list -->
     <Switch>
-      <Prefab>Gate Switch</Prefab>
+      <Prefab>Gate Switch Any</Prefab>
     </Switch>
 
     <Switch offset = "12">
-      <Prefab>Gate Switch</Prefab>
+      <Prefab>Gate Switch Any</Prefab>
       <Height>1</Height>
     </Switch>
 
     <Switch offset = "24">
-      <Prefab>Gate Switch</Prefab>
+      <Prefab>Gate Switch Any</Prefab>
     </Switch>
 
     <Switch offset = "36">
-      <Prefab>Gate Switch</Prefab>
+      <Prefab>Gate Switch Any</Prefab>
       <Height>-1</Height>
     </Switch>
 
     <Switch offset = "48">
-      <Prefab>Gate Switch</Prefab>
-      <Height>0</Height>
+      <Prefab>Gate Switch Any</Prefab>
     </Switch>
+
+    <Switch offset = "6">
+      <Prefab>Gate Switch Pink</Prefab>
+      <Height>2</Height>
+    </Switch>
+
+    <Switch offset = "6">
+      <Prefab>Gate Switch Blue</Prefab>
+      <Height>-1</Height>
+    </Switch>
+
+    <Switch offset = "18">
+      <Prefab>Gate Switch Pink</Prefab>
+      <Height>-1</Height>
+    </Switch>
+
+    <Switch offset = "18">
+      <Prefab>Gate Switch Blue</Prefab>
+      <Height>2</Height>
+    </Switch>
+
+    <Switch offset = "30">
+      <Prefab>Gate Switch Pink</Prefab>
+      <Height>-2</Height>
+    </Switch>
+
+    <Switch offset = "30">
+      <Prefab>Gate Switch Blue</Prefab>
+      <Height>1</Height>
+    </Switch>
+
+    <Switch offset = "42">
+      <Prefab>Gate Switch Pink</Prefab>
+      <Height>1</Height>
+    </Switch>
+
+    <Switch offset = "42">
+      <Prefab>Gate Switch Blue</Prefab>
+      <Height>-2</Height>
+    </Switch>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>79.5</Distance>
+    <Height>2</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>79.5</Distance>
+    <Height>2.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>79.5</Distance>
+    <Height>1.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>80.75</Distance>
+    <Height>2</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>80.75</Distance>
+    <Height>2.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>80.75</Distance>
+    <Height>1.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>82</Distance>
+    <Height>2</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>82</Distance>
+    <Height>2.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>82</Distance>
+    <Height>1.5</Height>
+    <Speed>2</Speed>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>79.5</Distance>
+    <Height>-2</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>79.5</Distance>
+    <Height>-2.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>79.5</Distance>
+    <Height>-1.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>80.75</Distance>
+    <Height>-2</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>80.75</Distance>
+    <Height>-2.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>80.75</Distance>
+    <Height>-1.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>82</Distance>
+    <Height>-2</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>82</Distance>
+    <Height>-2.5</Height>
+    <Speed>2</Speed>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>82</Distance>
+    <Height>-1.5</Height>
+    <Speed>2</Speed>
   </Object>
 </Level>

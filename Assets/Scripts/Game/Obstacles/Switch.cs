@@ -9,7 +9,7 @@ public class Switch : AbstractObstacle {
   private List<IObstacle> links = new List<IObstacle>();
 
   public override void Execute(Player player, BoxCollider2D collider) {
-    if(isServer && Matches(player)) {
+    if(isServer && Matches(player) && player.Active) {
       foreach(var link in links) {
         link.Activate();
       }

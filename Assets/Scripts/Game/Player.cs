@@ -6,9 +6,14 @@ using UnityEngine.Networking;
 
 public class Player : NetworkBehaviour {
 
+  public bool Active {
+    get {
+      return alive && timer == 0;
+    }
+  }
+
   public float gravity, jumpSpeed;
   public Team team;
-  public bool debug;
   public float disabledTime;
   public int invulnFrames;
   private bool alive;
@@ -41,17 +46,14 @@ public class Player : NetworkBehaviour {
     scoreboard.AddPoints(points);
   }
 
-  internal void EatApple() {
-    ScorePoints(150);
-  }
-
   internal void Jump() {
-    if(isLocalPlayer && (alive || debug))
+    if(isLocalPlayer && alive )
       speed = 5;
   }
 
   internal void Glide() {
-    speed = speed < -gravity / 8 ? -gravity / 8 : speed;
+    if(isLocalPlayer && alive)
+      speed = speed < -gravity / 8 ? -gravity / 8 : speed;
   }
 
   public void Hit() {
@@ -82,13 +84,11 @@ public class Player : NetworkBehaviour {
         counter = invulnFrames;
       }
     } else if(alive) {
-      if(Input.GetKeyDown(KeyCode.Space) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)) {
+      if(Input.GetKeyDown(KeyCode.Space) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
         Jump();
-      }
 
-      if(debug && pos.y < -5) {
-        Jump();
-      }
+      if (Input.GetKey (KeyCode.Space))
+        Glide ();
     } else if (timer < disabledTime) {
       timer += Time.deltaTime;
     } else {
@@ -96,6 +96,11 @@ public class Player : NetworkBehaviour {
     }
 
     pos.y += speed * Time.deltaTime;
+
+    if (pos.y > 5) {
+      speed = 0;
+      pos.y = 5;
+    }
 
     pos.y = pos.y > -8 ? pos.y : -8;
     transform.position = pos; 

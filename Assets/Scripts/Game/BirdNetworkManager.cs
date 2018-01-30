@@ -64,7 +64,7 @@ public class BirdNetworkManager : NetworkManager {
 
   public override void OnStopServer() {
     base.OnStopServer();
-
     StopClient();
+    networkDiscovery.StopBroadcast ();
   }
 }

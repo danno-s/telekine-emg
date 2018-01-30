@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 4
+  scoreArea: {fileID: 0}
 --- !u!114 &114801932808918852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1462,7 +1463,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   ForceModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -1590,7 +1591,7 @@ ParticleSystem:
     randomizePerFrame: 0
   ExternalForcesModule:
     enabled: 0
-    multiplier: 1
+    multiplier: 50
   ClampVelocityModule:
     enabled: 0
     x:

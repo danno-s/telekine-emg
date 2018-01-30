@@ -13,7 +13,7 @@ public class ScoreUpdate : AbstractObstacle {
   private MeshRenderer dimmer;
   private bool moving = true, ready = false;
   private float time = 0;
-  private int maxScore, highscore, level;
+  private int maxScore, highscore, level, lastPoints = 0;
 
   public override void Execute(Player player, BoxCollider2D collider) {}
 
@@ -59,9 +59,9 @@ public class ScoreUpdate : AbstractObstacle {
 
     time += Time.deltaTime;
 
-    var points = (int) (-maxScore / (countTime * countTime) * Mathf.Pow(((time > countTime ? countTime : time) - countTime), 2) + maxScore);
+    var points = (int) (-maxScore / Mathf.Pow(countTime, 4) * Mathf.Pow(((time > countTime ? countTime : time) - countTime), 4) + maxScore);
     points = points > maxScore ? maxScore : points;
-    score.SetPoints(maxScore - points);
+    score.TakePoints(points - lastPoints);
 
     var pointStr = points.ToString();
     text.text = "";
@@ -88,6 +88,8 @@ public class ScoreUpdate : AbstractObstacle {
       FindObjectOfType<ScoreManager>().Save(level, points);
       ready = true;
     }
+
+    lastPoints = points;
   }
 
   public void ContinueMoving() {

@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
+  scoreArea: {fileID: 0}
   normalScoreColor: {r: 0, g: 0.78275865, b: 0.372, a: 1}
   highscoreColor: {r: 0.878, g: 0.778, b: 0.316, a: 1}
   countTime: 3
@@ -3759,7 +3760,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1933827481
+  randomSeed: -2022338320
   InitialModule:
     serializedVersion: 3
     enabled: 1
