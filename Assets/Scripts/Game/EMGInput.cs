@@ -56,9 +56,8 @@ public class EMGInput : MonoBehaviour {
   }
 
   public static void Calibrate(float rest, float hold) {
-    var range = hold - rest;
-    resting = rest + 2 * range / 3;
-    active = hold - 2 * range / 3;
+    resting = rest;
+    active = hold;
     PlayerPrefs.SetFloat("resting", resting);
     PlayerPrefs.SetFloat("active", active);
     PlayerPrefs.Save();
@@ -70,8 +69,9 @@ public class EMGInput : MonoBehaviour {
       audioClip.GetOutputData(f, 0);
       intensity = 0f;
       foreach(var sample in f)
-        intensity = intensity < Math.Abs(sample) ? Math.Abs(sample) : intensity;
+        intensity += Mathf.Abs(sample);
 
+      intensity /= f.Length;
       lastValues.Add(intensity);
 
       if(lastValues.Count > averageLength)
@@ -151,5 +151,9 @@ public class EMGInput : MonoBehaviour {
 
   public static float GetRawIntensity() {
     return intensity;
+  }
+
+  public static float GetRelativeIntensity() {
+    return GetIntensity () / active;
   }
 }

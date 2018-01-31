@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Birds.unity
     guid: bae2abda6b0e9d342ac50ee572fc34ec
+  - enabled: 1
+    path: Assets/Scenes/EMG Recording.unity
+    guid: c692d47510478a647bda43ea7b3c4601

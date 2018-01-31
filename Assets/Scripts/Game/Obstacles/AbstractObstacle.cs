@@ -7,6 +7,8 @@ using System.Collections;
 /// It updates the obstacle's position automatically and determines when it should be destroyed.
 /// </summary>
 public abstract class AbstractObstacle : NetworkBehaviour, IObstacle {
+  private const float PLAYER_POS = -6f;
+
   /// <summary>
   /// The team. Can be Pink, Blue, Yellow or Any (matches any) or None (can't match)
   /// </summary>
@@ -21,7 +23,7 @@ public abstract class AbstractObstacle : NetworkBehaviour, IObstacle {
   /// The obstacle's movement speed. Can be assigned in the level XML document with the tag "Speed".
   /// </summary>
   [SyncVar]
-  protected float speed;
+  protected float speed, vSpeed, vThreshold;
 
   abstract public void Execute(Player player, BoxCollider2D collider);
 
@@ -29,6 +31,14 @@ public abstract class AbstractObstacle : NetworkBehaviour, IObstacle {
 
   public void SetSpeed(float speed) {
     this.speed = speed;
+  }
+
+  public void SetVSpeed(float vSpeed) {
+    this.vSpeed = vSpeed;
+  }
+
+  public void SetVThreshold(float threshold) {
+    vThreshold = threshold;
   }
 
   public virtual bool CanBeDestroyed() {
@@ -42,6 +52,8 @@ public abstract class AbstractObstacle : NetworkBehaviour, IObstacle {
   protected void Update() {
     var myPos = transform.position;
     myPos.x -= speed * Time.deltaTime;
+    if(myPos.x - PLAYER_POS < vThreshold)
+      myPos.y += vSpeed * Time.deltaTime;
     transform.position = myPos;
 
     if(CanBeDestroyed()) {

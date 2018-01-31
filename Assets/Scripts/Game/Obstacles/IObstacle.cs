@@ -23,6 +23,19 @@ public interface IObstacle {
   void SetSpeed(float speed);
 
   /// <summary>
+  /// Sets the vertical speed. Intended for use from a <see cref="Spawner"/> .
+  /// </summary>
+  /// <param name="speed">Target speed.</param>
+  void SetVSpeed(float vSpeed);
+
+  /// <summary>
+  /// Sets the point from which the object should start moving vertically (measured from the player's position to the right).
+  /// Intended for use from a <see cref="Spawner"/> .
+  /// </summary>
+  /// <param name="speed">Threshold.</param>
+  void SetVThreshold(float vSpeed);
+
+  /// <summary>
   /// Determines whether this instance can be destroyed.
   /// </summary>
   /// <returns><c>true</c> if this instance can be destroyed; otherwise, <c>false</c>.</returns>

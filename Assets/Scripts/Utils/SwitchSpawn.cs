@@ -8,12 +8,13 @@ internal class SwitchSpawn : Spawn {
     linkedObjects = spawns;
   }
 
-  public override List<GameObject> Activate(Transform manager) {
-    var objects = base.Activate(manager);
+  public override List<GameObject> Activate(Transform manager, float distance) {
+    var objects = base.Activate(manager, distance);
     var mySwitch = objects[0];
 
     for(int i = 0; i < linkedObjects.Count; i++) {
-      var nextObject = linkedObjects[i].Activate(manager);
+      linkedObjects [i].SetDistance (this.distance);
+      var nextObject = linkedObjects[i].Activate(manager, distance);
       objects.AddRange(nextObject);
       mySwitch.GetComponent<Switch>().Subscribe(nextObject[0].GetComponent<IObstacle>());
     }

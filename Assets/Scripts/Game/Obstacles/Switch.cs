@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -10,6 +9,9 @@ public class Switch : AbstractObstacle {
 
   public override void Execute(Player player, BoxCollider2D collider) {
     if(isServer && Matches(player) && player.Active) {
+      var aS = GetComponent<AudioSource> ();
+      aS.pitch = 0.95f + Random.value * 0.1f;
+      aS.Play ();
       foreach(var link in links) {
         link.Activate();
       }

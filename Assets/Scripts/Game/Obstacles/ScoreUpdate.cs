@@ -11,6 +11,7 @@ public class ScoreUpdate : AbstractObstacle {
   private TextMesh text, highscoreText;
   private ParticleSystem particles;
   private MeshRenderer dimmer;
+  new private AudioSource audio;
   private bool moving = true, ready = false;
   private float time = 0;
   private int maxScore, highscore, level, lastPoints = 0;
@@ -26,6 +27,8 @@ public class ScoreUpdate : AbstractObstacle {
 
     dimmer = GameObject.Find("Dimmer").GetComponent<MeshRenderer>();
 
+    audio = GetComponent<AudioSource> ();
+
     highscoreText = transform.GetChild(1).GetComponent<TextMesh>();
 
     particles = GetComponent<ParticleSystem>(); 
@@ -35,6 +38,8 @@ public class ScoreUpdate : AbstractObstacle {
     manager.Load(level);
     highscore = manager.GetScore(level);
     highscoreText.text = "HIGHSCORE: " + highscore;
+
+    BackgroundMusic.OnScoreEnter ();
   }
 
   [Command]
@@ -62,6 +67,10 @@ public class ScoreUpdate : AbstractObstacle {
     var points = (int) (-maxScore / Mathf.Pow(countTime, 4) * Mathf.Pow(((time > countTime ? countTime : time) - countTime), 4) + maxScore);
     points = points > maxScore ? maxScore : points;
     score.TakePoints(points - lastPoints);
+    if (points - lastPoints > 0) {
+      audio.pitch = 0.2f * (1 - (maxScore - points) / (float) maxScore) + 0.9f;
+      audio.Play ();
+    }
 
     var pointStr = points.ToString();
     text.text = "";
@@ -96,5 +105,6 @@ public class ScoreUpdate : AbstractObstacle {
     moving = true;
     if(particles.isPlaying)
       particles.Stop();
+    BackgroundMusic.OnScoreExit ();
   }
 }

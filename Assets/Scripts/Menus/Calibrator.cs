@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -33,7 +35,7 @@ public class Calibrator : MonoBehaviour {
       if(maxTimes[stage] - times[stage] > 0)
         break;
     }
-    
+
     if(stage > 3) {
       EMGInput.Calibrate(rest / restN, hold / holdN);
       try {

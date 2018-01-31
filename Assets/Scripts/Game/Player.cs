@@ -23,7 +23,8 @@ public class Player : NetworkBehaviour {
   private float timer;
   private Animator animator;
   private Score scoreboard;
-  
+  new private AudioSource audio;
+
   // Use this for initialization
   void Start() {
     if(!isLocalPlayer) {
@@ -33,13 +34,11 @@ public class Player : NetworkBehaviour {
 
     scoreboard = FindObjectOfType<Score>();
 
-    EMGInput.SubscribeToSinglePulse(Jump);
-    EMGInput.SubscribeToContinuousPulse(Glide);
-
     animator = GetComponent<Animator>();
+    audio = GetComponent<AudioSource> ();
     alive = true;
 
-    speed = jumpSpeed;
+    speed = 0;
   }
 
   internal void ScorePoints(int points) {
@@ -47,8 +46,10 @@ public class Player : NetworkBehaviour {
   }
 
   internal void Jump() {
-    if(isLocalPlayer && alive )
-      speed = 5;
+    if (isLocalPlayer && alive) {
+      speed = jumpSpeed;
+      audio.Play ();
+    }
   }
 
   internal void Glide() {
@@ -74,25 +75,25 @@ public class Player : NetworkBehaviour {
       counter--;
     
     var pos = transform.position;
-    speed -= gravity * Time.deltaTime;
 
     if(alive && timer != 0) {
-      Jump();
+      Jump ();
       if(transform.position.y >= -0.5) {
         timer = 0;
         animator.SetBool("Dead", false);
         counter = invulnFrames;
       }
     } else if(alive) {
-      if(Input.GetKeyDown(KeyCode.Space) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
-        Jump();
-
-      if (Input.GetKey (KeyCode.Space))
-        Glide ();
+      var target = EMGInput.GetRelativeIntensity () * 10f - 5f;
+      var speed = (target - pos.y) / 0.1f;
+      Debug.Log (speed);
+      pos.y += speed * Time.deltaTime; 
     } else if (timer < disabledTime) {
+      speed -= gravity * Time.deltaTime;
       timer += Time.deltaTime;
     } else {
       alive = true;
+      speed = 0;
     }
 
     pos.y += speed * Time.deltaTime;
@@ -101,7 +102,7 @@ public class Player : NetworkBehaviour {
       speed = 0;
       pos.y = 5;
     }
-
+      
     pos.y = pos.y > -8 ? pos.y : -8;
     transform.position = pos; 
   }

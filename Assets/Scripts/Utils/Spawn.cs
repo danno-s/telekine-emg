@@ -7,12 +7,16 @@ using System.Collections.Generic;
 /// </summary>
 public class Spawn {
   public GameObject prefab;
-  public float distance, height, offset, speed = 5;
+  public float distance, height, offset, speed = 5, vSpeed, vThreshold = 16;
 
   public Spawn(string prefabName, float spawnDistance, float spawnHeight) {
     prefab = Resources.Load(prefabName) as GameObject;
     distance = spawnDistance;
     height = spawnHeight;
+  }
+
+  public void SetDistance(float newDistance) {
+    distance = newDistance;
   }
 
   public void SetOffset(float offset) {
@@ -23,19 +27,31 @@ public class Spawn {
     this.speed = speed;
   }
 
+  public void SetVSpeed(float vSpeed) {
+    this.vSpeed = vSpeed;
+  }
+
+  public void SetVThreshold(float threshold) {
+    vThreshold = threshold;
+  }
+
   /// <summary>
   /// Create the object and set its initial values.
   /// </summary>
-  /// <param name="manager">Manager.</param>
+  /// <param name="manager">The transform to attach this object to.</param>
+  /// <param name="distance">Offset from the parent's transform to spawn at.</param>
   /// <returns>A List of the spawned objects</returns>
-  public virtual List<GameObject> Activate(Transform manager) {
+  public virtual List<GameObject> Activate(Transform manager, float distance) {
     var obj = GameObject.Instantiate(prefab, manager);
     var pos = obj.transform.position;
     pos.y = height;
-    pos.x += offset;
+    pos.x += offset + this.distance - distance;
     obj.transform.position = pos;
 
-    obj.GetComponent<IObstacle>().SetSpeed(speed);
+    var obstacle = obj.GetComponent<IObstacle>();
+    obstacle.SetSpeed (speed);
+    obstacle.SetVSpeed (vSpeed);
+    obstacle.SetVThreshold (vThreshold);
 
     return new List<GameObject>() { obj };
   }

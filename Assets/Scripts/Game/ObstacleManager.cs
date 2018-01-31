@@ -61,7 +61,7 @@ public class ObstacleManager : NetworkBehaviour {
 
   void SpawnObstacles(List<Spawn> batch) {
     foreach(var spawn in batch) {
-      List<GameObject> objects = spawn.Activate(transform);
+      List<GameObject> objects = spawn.Activate(transform, distance);
       foreach(var obj in objects) {
         NetworkServer.Spawn(obj);
       }

@@ -15,6 +15,9 @@ public class GateSwitch : AbstractObstacle {
   public override void Execute(Player player, BoxCollider2D collider) {
     if (Matches (player) && player.Active) {
       gate.SwitchActivated (this);
+      var aS = GetComponent<AudioSource> ();
+      aS.pitch = 0.95f + Random.value * 0.1f;
+      aS.Play ();
       if (player.isLocalPlayer) {
         player.ScorePoints (25);
       }

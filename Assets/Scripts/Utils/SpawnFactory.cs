@@ -39,13 +39,18 @@ internal class SpawnFactory {
       result = new Spawn(prefab, distance, height);
     }
 
-    if(obj.Elements("Speed").Any()) {
+    if(obj.Elements("Speed").Any())
       result.SetSpeed(float.Parse(obj.Element("Speed").Value));
-    }
 
-    if(obj.HasAttributes) {
+    if(obj.HasAttributes)
       result.SetOffset(float.Parse(obj.Attribute("offset").Value));
+
+    if(obj.Elements("VSpeed").Any()){
+      result.SetVSpeed(float.Parse(obj.Element("VSpeed").Value));
+      if(obj.Elements("VThreshold").Any())
+        result.SetVThreshold(float.Parse(obj.Element("VThreshold").Value));
     }
+    
     
     return result;
   }

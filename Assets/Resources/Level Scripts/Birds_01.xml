@@ -168,6 +168,12 @@
   </Object>
 
   <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>62.5</Distance>
+    <Height>2.5</Height>
+  </Object>
+
+  <Object>
     <Prefab>Apple Pink</Prefab>
     <Distance>60</Distance>
     <Height>-3</Height>
@@ -182,8 +188,14 @@
 
   <Object>
     <Prefab>Apple Blue</Prefab>
+    <Distance>67.5</Distance>
+    <Height>2.5</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Blue</Prefab>
     <Distance>70</Distance>
-    <Height>3</Height>
+    <Height>2.5</Height>
   </Object>
 
   <Object>
@@ -193,9 +205,21 @@
   </Object>
 
   <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>72.5</Distance>
+    <Height>-2.5</Height>
+  </Object>
+
+  <Object>
     <Prefab>Pipe Up Blue</Prefab>
     <Distance>75</Distance>
     <Height>2</Height>
+  </Object>
+
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>77.5</Distance>
+    <Height>-2.5</Height>
   </Object>
 
   <Object>
@@ -392,11 +416,6 @@
 
   <Object>
     <Prefab>Apple Pink</Prefab>
-    <Distance>121.5</Distance>
-    <Height>-3</Height>
-  </Object>
-  <Object>
-    <Prefab>Apple Pink</Prefab>
     <Distance>122</Distance>
     <Height>-3</Height>
   </Object>
@@ -407,22 +426,22 @@
   </Object>
   <Object>
     <Prefab>Apple Pink</Prefab>
-    <Distance>122</Distance>
+    <Distance>123</Distance>
+    <Height>-3</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Pink</Prefab>
+    <Distance>122.5</Distance>
     <Height>-3.5</Height>
   </Object>
   <Object>
     <Prefab>Apple Pink</Prefab>
-    <Distance>122</Distance>
+    <Distance>122.5</Distance>
     <Height>-2.5</Height>
   </Object>
 
   <Object>
     <Prefab>Apple Blue</Prefab>
-    <Distance>121.5</Distance>
-    <Height>3</Height>
-  </Object>
-  <Object>
-    <Prefab>Apple Blue</Prefab>
     <Distance>122</Distance>
     <Height>3</Height>
   </Object>
@@ -433,14 +452,17 @@
   </Object>
   <Object>
     <Prefab>Apple Blue</Prefab>
-    <Distance>122</Distance>
+    <Distance>123</Distance>
+    <Height>3</Height>
+  </Object>
+  <Object>
+    <Prefab>Apple Blue</Prefab>
+    <Distance>122.5</Distance>
     <Height>3.5</Height>
   </Object>
   <Object>
     <Prefab>Apple Blue</Prefab>
-    <Distance>122</Distance>
+    <Distance>122.5</Distance>
     <Height>2.5</Height>
   </Object>
-
-
 </Level>

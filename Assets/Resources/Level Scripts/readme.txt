@@ -22,6 +22,12 @@ Inside there can only be <Objects>:
     At what height the object should be spawned. Defaults to 0.
     <Speed>(optional):
     The speed the object should be spawned with. Defaults to 5.
+    <VSpeed>(optional):
+    The speed the object should move vertically. Defaults to 0.
+    <VThreshold>(optional):
+    How far from the player the object should activate its vertical movement. Defaults to 16.
+    <Aperture>(Gate prefab only):
+    How wide should the gap between both pipes be when all the switches are activated.
 
     There are some special cases where an object may have inner tags representing more objects. These are:
       <Link>:

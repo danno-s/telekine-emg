@@ -6,6 +6,9 @@ public class Apple : AbstractObstacle {
   public override void Execute(Player player, BoxCollider2D collider) {
     if(Matches(player) && player.Active) {
       GetComponent<SpriteRenderer>().enabled = false;
+      var aS = GetComponent<AudioSource> ();
+      aS.pitch = 0.95f + Random.value;
+      aS.Play ();
       var ps = GetComponent<ParticleSystem>();
       ps.Play();
       Destroy(gameObject, ps.main.startLifetime.constant);

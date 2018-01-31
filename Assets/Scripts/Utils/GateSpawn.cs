@@ -10,8 +10,8 @@ internal class GateSpawn : Spawn {
     switches = spawns;
   }
 
-  public override List<GameObject> Activate(Transform manager) {
-    var objects = base.Activate(manager);
+  public override List<GameObject> Activate(Transform manager, float distance) {
+    var objects = base.Activate(manager, distance);
     var gate = objects[0];
 
     var g = gate.GetComponent<Gate>();
@@ -19,7 +19,8 @@ internal class GateSpawn : Spawn {
     g.maxHp = switches.Count;
 
     for(int i = 0; i < switches.Count; i++) {
-      var nextObject = switches[i].Activate(manager);
+      switches [i].SetDistance (this.distance);
+      var nextObject = switches[i].Activate(manager, distance);
       objects.AddRange(nextObject);
     }
 
