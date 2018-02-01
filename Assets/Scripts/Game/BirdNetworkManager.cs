@@ -11,10 +11,12 @@ public class BirdNetworkManager : NetworkManager {
   public Text debug;
   public float wait;
   public List<GameObject> playerPrefabs;
+  private List<GameObject> playerBackups;
   float time;
 
   private void Start() {
     networkDiscovery.Initialize();
+    playerBackups = new List<GameObject>(playerPrefabs);
     if(SceneManager.GetActiveScene().name == "Birds") {
       StartHost();
     }
@@ -56,15 +58,16 @@ public class BirdNetworkManager : NetworkManager {
   }
 
   public void FindMatch() {
+    networkDiscovery.Initialize ();
     time = 0;
     Log("Buscando Partidas...");
     if(!networkDiscovery.StartAsClient())
       Debug.Log("Couldn't start listening.");
   }
 
-  public override void OnStopServer() {
-    base.OnStopServer();
-    StopClient();
-    networkDiscovery.StopBroadcast ();
+  public override void OnStopHost ()
+  {
+    base.OnStopHost ();
+    playerPrefabs = new List<GameObject> (playerBackups);
   }
 }

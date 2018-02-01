@@ -88,8 +88,6 @@ MonoBehaviour:
   speed: 5
   parallax: {fileID: 0}
   levels:
-  - Birds_01
   - Birds_02
-  - Birds_03
   betweenLevels: Birds_00
   lastLevel: 0

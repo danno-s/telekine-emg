@@ -45,8 +45,10 @@ public class ObstacleManager : NetworkBehaviour {
         script = new LevelScript(levels[0]);
         lastLevel = script.level;
       } catch {
-        FindObjectOfType<BirdNetworkManager> ().StopServer ();
-        Destroy (FindObjectOfType<BirdNetworkManager> ().gameObject);
+        var bnm = FindObjectOfType<BirdNetworkManager> ();
+        bnm.networkDiscovery.StopBroadcast ();
+        bnm.StopHost ();
+        SceneManager.LoadScene ("Main Menu");
       }
     } else {
       levels.RemoveAt(0);

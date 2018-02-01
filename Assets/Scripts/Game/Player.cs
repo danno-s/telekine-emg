@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class Player : NetworkBehaviour {
-
   public bool Active {
     get {
       return alive && timer == 0;
@@ -16,7 +15,7 @@ public class Player : NetworkBehaviour {
   public Team team;
   public float disabledTime;
   public int invulnFrames;
-  private bool alive;
+  private bool alive, emg;
   [SyncVar]
   public float speed;
   private int counter;
@@ -37,6 +36,12 @@ public class Player : NetworkBehaviour {
     animator = GetComponent<Animator>();
     audio = GetComponent<AudioSource> ();
     alive = true;
+
+    try {
+      emg = FindObjectOfType<EMGInput>().enabled;
+    } catch {
+      emg = false;
+    }
 
     speed = 0;
   }
@@ -84,10 +89,19 @@ public class Player : NetworkBehaviour {
         counter = invulnFrames;
       }
     } else if(alive) {
-      var target = EMGInput.GetRelativeIntensity () * 10f - 5f;
-      var speed = (target - pos.y) / 0.1f;
-      Debug.Log (speed);
-      pos.y += speed * Time.deltaTime; 
+      #if UNITY_EDITOR || UNITY_EDITOR_64
+      if(Input.GetKey(KeyCode.UpArrow)) {
+        pos.y += jumpSpeed * Time.deltaTime;
+      } else if(Input.GetKey(KeyCode.DownArrow)) {
+        pos.y -= jumpSpeed * Time.deltaTime;
+      }
+      #endif
+      if (emg) {
+        var target = EMGInput.GetRelativeIntensity () * 10f - 5f;
+        var speed = (target - pos.y) / 0.1f;
+        Debug.Log (speed);
+        pos.y += speed * Time.deltaTime; 
+      }
     } else if (timer < disabledTime) {
       speed -= gravity * Time.deltaTime;
       timer += Time.deltaTime;

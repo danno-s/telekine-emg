@@ -232,8 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79f1970f58059a49bf954094ab72802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 7
-  jumpSpeed: 2.5
+  gravity: 12.5
+  jumpSpeed: 5
   team: 1
   disabledTime: 3
   invulnFrames: 60

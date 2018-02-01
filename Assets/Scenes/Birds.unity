@@ -348,12 +348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea55b7451da1be4eb83e8653bf6d572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &269871312 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114634374228119536, guid: ca081488aa9afbf4ab64e117f4b04af9,
-    type: 2}
-  m_PrefabInternal: {fileID: 134782473}
-  m_Script: {fileID: 11500000, guid: c678bc852776e604596c791f072d1e44, type: 3}
 --- !u!1001 &1028120331
 Prefab:
   m_ObjectHideFlags: 0
@@ -719,16 +713,6 @@ Prefab:
     - target: {fileID: 4957419565109494, guid: 674e034391cfc624fb9387481d66728a, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114596325242438330, guid: 674e034391cfc624fb9387481d66728a,
-        type: 2}
-      propertyPath: parallax
-      value: 
-      objectReference: {fileID: 269871312}
-    - target: {fileID: 114596325242438330, guid: 674e034391cfc624fb9387481d66728a,
-        type: 2}
-      propertyPath: levels.Array.data[0]
-      value: Birds_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 674e034391cfc624fb9387481d66728a, type: 2}
