@@ -99,7 +99,6 @@ public class Player : NetworkBehaviour {
       if (emg) {
         var target = EMGInput.GetRelativeIntensity () * 10f - 5f;
         var speed = (target - pos.y) / 0.1f;
-        Debug.Log (speed);
         pos.y += speed * Time.deltaTime; 
       }
     } else if (timer < disabledTime) {
